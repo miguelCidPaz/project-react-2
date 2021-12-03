@@ -1,10 +1,11 @@
 import { Component } from 'react';
+import ListNews from './components/ListNews'
 import { dataBase } from './Data';
 
 class App extends Component {
     render() {
         return (
-            <h1>Hola mundo</h1>
+            <ListNews />
         )
     }
 }
