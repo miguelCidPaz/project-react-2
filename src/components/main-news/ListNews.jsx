@@ -7,12 +7,10 @@ class ListNews extends Component {
     render() {
         const arr = Object.values(this.props.news);
         return (
-            <div className="main-content">
-                <div className="main-list">
-                    {arr.map((element, index) => {
-                        return <CardNew key={index} new={element} />
-                    })}
-                </div>
+            <div className="main-list">
+                {arr.map((element, index) => {
+                    return <CardNew key={index} new={element} />
+                })}
             </div>
         )
     }

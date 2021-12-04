@@ -1,11 +1,17 @@
 /* Estilo provisional */
-.main-content{
+.main-content, .main-content-column{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
     background-color: #F2F4F6;
+}
+
+.main-content-column{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 /* Lista de cardsnews*/

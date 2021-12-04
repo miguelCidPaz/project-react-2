@@ -83,14 +83,14 @@ export const dataBase = {
     },
 
     partners: {
-        Item1: { partner: "Innovacion LG", color: "#900B32" },
-        Item2: { partner: "realme Tech Life", color: "#FFC914" },
-        Item3: { partner: "Innovacion Volvo", color: "#003057" },
-        Item4: { partner: "Planeta Fantasy", color: "#298CCD" },
-        Item5: { partner: "e-Citroen", color: "#76CFDB" },
-        Item6: { partner: "e-Movilidad Opel", color: "#F0CB11" },
-        Item7: { partner: "e-Motion Peugeot", color: "#162133" },
-        Item8: { partner: "Tu Casa Roborock", color: "#E80028" }
+        Item1: { partner: "Innovacion LG", color: "partner-one" },
+        Item2: { partner: "realme Tech Life", color: "partner-two" },
+        Item3: { partner: "Innovacion Volvo", color: "partner-three" },
+        Item4: { partner: "Planeta Fantasy", color: "partner-four" },
+        Item5: { partner: "e-Citroen", color: "partner-five" },
+        Item6: { partner: "e-Movilidad Opel", color: "partner-six" },
+        Item7: { partner: "e-Motion Peugeot", color: "partner-seven" },
+        Item8: { partner: "Tu Casa Roborock", color: "partner-eight" }
     },
 
     fastNews: {

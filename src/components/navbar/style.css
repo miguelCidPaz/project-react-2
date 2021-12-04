@@ -1,0 +1,71 @@
+/* COLORES PARA LOS LINKS */
+
+.link-partner{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+    width: 10%;
+}
+
+.partner-one{
+    background-color: #900B32;
+}
+
+.partner-two{
+    background-color: #FFC914;
+}
+
+.partner-three{
+    background-color: #003057;
+}
+
+.partner-four{
+    background-color: #298CCD;
+}
+
+.partner-five{
+    background-color: #76CFDB;
+}
+
+.partner-six{
+    background-color: #F0CB11;
+}
+
+.partner-seven{
+    background-color: #162133;
+}
+
+.partner-eight{
+    background-color: #E80028;
+}
+
+
+/*Estilos para el menu de navegacion*/
+
+.principal-navbar-content{
+    width: 100%;
+}
+
+.navbar-content-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    background-color: grey;
+}
+
+.menu-link-partner{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 40px;
+    background-color: red;
+    margin: auto;
+}
+
+.link-partner p{
+    margin: auto;
+}
