@@ -80,7 +80,35 @@ export const dataBase = {
             footer: " - Javier Pastor - Hace 7 horas",
             image: "https://i.blogs.es/5b6515/29527-original_jpg_92/500_333.jpeg"
         }
-    }
+    },
+
+    partners: {
+        Item1: { partner: "Innovacion LG", color: "#900B32" },
+        Item2: { partner: "realme Tech Life", color: "#FFC914" },
+        Item3: { partner: "Innovacion Volvo", color: "#003057" },
+        Item4: { partner: "Planeta Fantasy", color: "#298CCD" },
+        Item5: { partner: "e-Citroen", color: "#76CFDB" },
+        Item6: { partner: "e-Movilidad Opel", color: "#F0CB11" },
+        Item7: { partner: "e-Motion Peugeot", color: "#162133" },
+        Item8: { partner: "Tu Casa Roborock", color: "#E80028" }
+    },
+
+    fastNews: {
+        Item1: {
+            description: "Estas son las multas y restricciones para patinetes electricos tras la nueva Ley de trafico",
+            img: "https://i.blogs.es/8e9ab1/patinente/500_333.jpg"
+        },
+        Item2: {
+            description: "Desarrolladores originales: para que rotar el monitor 90º cuando puedes rotarlo 22º",
+            img: "https://i.blogs.es/de94a6/monitor-rotado/500_333.jpeg"
+        },
+        Item3: {
+            description: "Cuidado con el timo de las Micro SD falsas: si parecen demasiado buenas para ser verdad, es que lo son",
+            img: "https://i.blogs.es/a0e620/microsd-blur/500_333.jpg"
+        }
+    },
+
+    trending: ["Black Friday", "Teletrabajo", "Coche electrico", "Energia nuclear", "Xiaomi", "Patinete Electrico", "Auriculares", "Smartwatch", "Monitores", "Game Pass"]
 
     //Añadir mas conforme se necesite
 }
