@@ -1,0 +1,135 @@
+/* Estilo provisional */
+.main-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #F2F4F6;
+}
+
+/* Lista de cardsnews*/
+.main-list{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: auto;
+    gap: 20px;
+    padding: 10px;
+    box-shadow: 0 0 5px white;
+}
+
+.body-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 40%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 5px grey, 0 0 5px inset grey;
+}
+
+.card-img{
+    display: flex;
+    margin: auto;
+    padding: 10px;
+    width: 40%;
+    height: 90%;
+}
+
+.card-img img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 5px grey;
+}
+
+.card-text{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 5%;
+    width: 60%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.description-card-text{
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.description-card-text:hover{
+    color: red;
+}
+
+.categoria-card-text{
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: green;
+    font-weight: lighter;
+}
+
+.footer-card-text{
+    cursor: pointer;
+}
+
+.comments-card-text{
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px;
+    margin-left: 5px;
+    box-shadow: 0 0 5px grey;
+}
+
+.comments-card-text:hover{
+    box-shadow: 0 0 10px grey;
+}
+
+.read-more{
+    font-size: 20px;
+    margin-left: 10px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.read-more:hover{
+    color: red;
+}
+
+
+@media (max-width:800px) {
+    .card-text{
+        font-size: 10px;
+        gap: 5px;
+        width: 100%;
+    }
+
+    .description-card-text{
+        font-size: 15px;
+    }
+
+    .categoria-card-text{
+        font-size: 12px;
+    }
+
+    .card-text button{
+        font-size: 12px;
+    }
+
+    .card-img{
+        height: 50%;
+        width: 30%;
+        padding: 0px;
+        padding-right: 5px;
+    }
+}
