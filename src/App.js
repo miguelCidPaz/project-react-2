@@ -5,7 +5,7 @@ import { dataBase } from './Data';
 class App extends Component {
     render() {
         return (
-            <ListNews />
+            <ListNews news={dataBase.ItemList} />
         )
     }
 }
