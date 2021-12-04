@@ -96,15 +96,18 @@ export const dataBase = {
     fastNews: {
         Item1: {
             description: "Estas son las multas y restricciones para patinetes electricos tras la nueva Ley de trafico",
-            img: "https://i.blogs.es/8e9ab1/patinente/500_333.jpg"
+            img: "https://i.blogs.es/8e9ab1/patinente/500_333.jpg",
+            class: "first-new"
         },
         Item2: {
             description: "Desarrolladores originales: para que rotar el monitor 90º cuando puedes rotarlo 22º",
-            img: "https://i.blogs.es/de94a6/monitor-rotado/500_333.jpeg"
+            img: "https://i.blogs.es/de94a6/monitor-rotado/500_333.jpeg",
+            class: "second-new"
         },
         Item3: {
             description: "Cuidado con el timo de las Micro SD falsas: si parecen demasiado buenas para ser verdad, es que lo son",
-            img: "https://i.blogs.es/a0e620/microsd-blur/500_333.jpg"
+            img: "https://i.blogs.es/a0e620/microsd-blur/500_333.jpg",
+            class: "three-new"
         }
     },
 

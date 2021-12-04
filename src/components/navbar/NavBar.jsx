@@ -1,13 +1,15 @@
 import { Component } from "react";
 import ContentPartners from "./ContentPartners";
+import NavBarNews from "./NavBarNews";
+import NavBarTrends from "./NavBarTrends";
 
 class NavBar extends Component {
     render() {
         return (
             <div className="principal-navbar-content">
                 <ContentPartners partners={this.props.partners} />
-                <div className="navbar-content"></div>
-                <div className="trendings"></div>
+                <NavBarNews news={this.props.news} />
+                <NavBarTrends trends={this.props.trends} />
             </div>
         )
     }

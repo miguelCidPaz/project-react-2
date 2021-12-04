@@ -1,50 +1,270 @@
-/* COLORES PARA LOS LINKS */
+/* CONTENTPARTNERS */
+
+/* Colores y efectos para los links */
+
+.partner-one{
+    position: relative;
+    background-color: #900B32;
+    z-index: 100;
+    cursor: pointer;
+}
+.partner-one::after{
+    content: '';
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80%;
+    background-color: #434B54;
+    transition:height 1s;
+    z-index: -1;
+    float: none;
+}
+
+.partner-one:hover::after{
+    transition-duration: 0.5s;
+    float: none;
+    position: absolute;
+    height: 1px;
+    z-index: -1;
+}
+
+.partner-two{
+    position: relative;
+    background-color: #FFC914;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.partner-two::after{
+    content: '';
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80%;
+    background-color: #434B54;
+    transition:height 1s;
+    z-index: -1;
+    float: none;
+}
+
+.partner-two:hover::after{
+    transition-duration: 0.5s;
+    float: none;
+    position: absolute;
+    height: 1px;
+    z-index: -1;
+}
+
+.partner-three{
+    position: relative;
+    background-color: #003057;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.partner-three::after{
+    content: '';
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80%;
+    background-color: #434B54;
+    transition:height 1s;
+    z-index: -1;
+    float: none;
+}
+
+.partner-three:hover::after{
+    transition-duration: 0.5s;
+    float: none;
+    position: absolute;
+    height: 1px;
+    z-index: -1;
+}
+
+
+.partner-four{
+    position: relative;
+    background-color: #298CCD;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.partner-four::after{
+    content: '';
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80%;
+    background-color: #434B54;
+    transition:height 1s;
+    z-index: -1;
+    float: none;
+}
+
+.partner-four:hover::after{
+    transition-duration: 0.5s;
+    float: none;
+    position: absolute;
+    height: 1px;
+    z-index: -1;
+}
+
+
+.partner-five{
+    position: relative;
+    background-color: #76CFDB;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.partner-five::after{
+    content: '';
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80%;
+    background-color: #434B54;
+    transition:height 1s;
+    z-index: -1;
+    float: none;
+}
+
+.partner-five:hover::after{
+    transition-duration: 0.5s;
+    float: none;
+    position: absolute;
+    height: 1px;
+    z-index: -1;
+}
+
+.partner-six{
+    position: relative;
+    background-color: #F0CB11;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.partner-six::after{
+    content: '';
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80%;
+    background-color: #434B54;
+    transition:height 1s;
+    z-index: -1;
+    float: none;
+}
+
+.partner-six:hover::after{
+    transition-duration: 0.5s;
+    float: none;
+    position: absolute;
+    height: 1px;
+    z-index: -1;
+}
+
+.partner-seven{
+    position: relative;
+    background-color: #162133;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.partner-seven::after{
+    content: '';
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80%;
+    background-color: #434B54;
+    transition:height 1s;
+    z-index: -1;
+    float: none;
+}
+
+.partner-seven:hover::after{
+    transition-duration: 0.5s;
+    float: none;
+    position: absolute;
+    height: 1px;
+    z-index: -1;
+}
+
+
+.partner-eight{
+    position: relative;
+    background-color: #E80028;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.partner-eight::after{
+    content: '';
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80%;
+    background-color: #434B54;
+    transition:height 1s;
+    z-index: -1;
+    float: none;
+}
+
+.partner-eight:hover::after{
+    transition-duration: 0.5s;
+    float: none;
+    position: absolute;
+    height: 1px;
+    z-index: -1;
+}
 
 .link-partner{
     display: flex;
     align-items: center;
     text-align: center;
     color: white;
-    width: 10%;
+    width: 10.5%;
 }
-
-.partner-one{
-    background-color: #900B32;
-}
-
-.partner-two{
-    background-color: #FFC914;
-}
-
-.partner-three{
-    background-color: #003057;
-}
-
-.partner-four{
-    background-color: #298CCD;
-}
-
-.partner-five{
-    background-color: #76CFDB;
-}
-
-.partner-six{
-    background-color: #F0CB11;
-}
-
-.partner-seven{
-    background-color: #162133;
-}
-
-.partner-eight{
-    background-color: #E80028;
-}
-
 
 /*Estilos para el menu de navegacion*/
 
 .principal-navbar-content{
     width: 100%;
+    background-color: #161D25;
 }
 
 .navbar-content-links{
@@ -52,9 +272,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #434B54;
     margin: auto;
     width: 100%;
-    background-color: grey;
 }
 
 .menu-link-partner{
@@ -62,10 +282,156 @@
     flex-direction: row;
     width: 80%;
     height: 40px;
-    background-color: red;
+    gap: 2%;
     margin: auto;
 }
 
 .link-partner p{
     margin: auto;
+}
+
+.label-partner-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* NAVBARNEWS */
+
+.navbar-content{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 360px;
+    background-color: #161D25;
+}
+
+.fastnews-content{
+    display: flex;
+    flex-direction: row;
+    margin-top: -50px;
+    gap: 10px;
+    width: 70%;
+}
+
+.fastnew-frame, .first-new, .second-new, .three-new{
+    margin: auto;
+    width: 30%;
+    height: 250px;
+    padding: 10px;
+    background-color: #434B54;
+    cursor: pointer;
+    transition: 0.3s ease;
+    color: white;
+}
+
+.fastnew-frame img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fastnew-frame p{
+    position: relative;
+    font-size: 15px;
+    font-weight: bolder;
+    top: -120px;
+    margin: auto;
+    width: 90%;
+    z-index: 5;
+}
+
+.first-new::before{
+    content: '';
+    position: absolute;
+    top: 8%;
+    left: 15.7%;
+    right: 0;
+    bottom: 0;
+    width: 21.5%;
+    height: 31%;
+    background-color: rgb(50 46 46 / 49%);
+    z-index: 2;
+}
+
+.second-new::before{
+    content: '';
+    position: absolute;
+    top: 8%;
+    left: 39.2%;
+    right: 0;
+    bottom: 0;
+    width: 21.5%;
+    height: 31%;
+    background-color: rgb(50 46 46 / 49%);
+    z-index: 2;
+}
+
+.three-new::before{
+    content: '';
+    position: absolute;
+    top: 8%;
+    left: 62.8%;
+    right: 0;
+    bottom: 0;
+    width: 21.5%;
+    height: 31%;
+    background-color: rgb(50 46 46 / 49%);
+    z-index: 2;
+}
+
+.first-new:hover::before{
+    display: none;
+}
+
+.second-new:hover::before{
+    display: none;
+}
+
+.three-new:hover::before{
+    display: none;
+}
+
+.first-new:hover{
+    background-color: greenyellow;
+}
+
+.second-new:hover{
+    background-color: greenyellow;
+}
+
+.three-new:hover{
+    background-color: greenyellow;
+}
+
+.trendings{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    gap: 10px;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: -40px;
+}
+
+.trendings p{
+    font-size: 15px;
+    font-weight: bolder;
+    color: white;
+}
+
+
+@media (max-width:750px){
+    .fastnew-frame p{
+        top: -250px;
+    }
+
+    .menu-link-partner{
+        width: 100%;
+        font-size: 12px;
+    }
 }
