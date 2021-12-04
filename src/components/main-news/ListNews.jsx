@@ -3,15 +3,9 @@ import CardNew from './CardNew';
 import './styles.css';
 
 class ListNews extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            ...this.props.news
-        }
-    }
 
     render() {
-        const arr = Object.values(this.state);
+        const arr = Object.values(this.props.news);
         return (
             <div className="main-content">
                 <div className="main-list">
