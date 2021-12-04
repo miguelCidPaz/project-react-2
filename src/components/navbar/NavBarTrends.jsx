@@ -6,6 +6,7 @@ class NavBarTrends extends Component {
         console.log(arr)
         return (
             <div className="trendings">
+                <p>🔥 Hoy se habla de &gt;</p>
                 {arr.map((element, index) => {
                     if (index === 0) {
                         return <p key={index}> {element} ➖ </p>
@@ -14,7 +15,6 @@ class NavBarTrends extends Component {
                     } else {
                         return <p key={index}> {element} </p>
                     }
-
                 })}
             </div>
         )

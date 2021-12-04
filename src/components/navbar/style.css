@@ -335,7 +335,7 @@
 
 .fastnew-frame p{
     position: relative;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bolder;
     top: -120px;
     margin: auto;
@@ -411,7 +411,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 100%;
     gap: 10px;
     margin: auto;
     margin-bottom: 20px;
@@ -428,10 +428,19 @@
 @media (max-width:750px){
     .fastnew-frame p{
         top: -250px;
+        font-size: 15px;
     }
 
     .menu-link-partner{
         width: 100%;
         font-size: 12px;
+    }
+
+    .trendings{
+        gap: 2px;
+    }
+
+    .trendings p{
+        font-size: 10px;
     }
 }
