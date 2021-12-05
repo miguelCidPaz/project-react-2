@@ -431,22 +431,34 @@
 .trend:hover{
     color: honeydew;
     text-decoration: underline;
+    text-shadow: 0 0 2px honeydew;
 }
 
 
 @media (max-width:750px){
+
+    .link-partner p{
+        font-size: 10px;
+    }
+
     .fastnew-frame p{
         top: -250px;
         font-size: 15px;
     }
 
     .menu-link-partner{
-        width: 100%;
+        width: 90%;
         font-size: 12px;
     }
 
     .trendings{
+        width: 10%;
         gap: 2px;
+        flex-wrap: wrap;
+    }
+    
+    .decoration{
+        display: none;
     }
 
     .trendings p{

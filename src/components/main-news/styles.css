@@ -120,6 +120,8 @@
     height: 40%;
     background-color: white;
     box-shadow: 0 0 5px grey;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 .last-new-label{
@@ -128,6 +130,7 @@
 
 .last-new-label p{
     font-size: 30px;
+    color: grey;
     font-weight: bolder;
     text-transform: uppercase;
 }
