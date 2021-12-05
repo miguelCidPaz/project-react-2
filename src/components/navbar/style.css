@@ -424,6 +424,15 @@
     color: white;
 }
 
+.trend{
+    cursor: pointer;
+}
+
+.trend:hover{
+    color: honeydew;
+    text-decoration: underline;
+}
+
 
 @media (max-width:750px){
     .fastnew-frame p{
