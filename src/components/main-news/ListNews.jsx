@@ -1,5 +1,6 @@
 import { Component } from "react";
 import CardNew from './CardNew';
+import HeaderNews from './HeaderNews';
 import './styles.css';
 
 class ListNews extends Component {
@@ -9,7 +10,12 @@ class ListNews extends Component {
         return (
             <div className="main-list">
                 {arr.map((element, index) => {
-                    return <CardNew key={index} new={element} />
+                    if (index === 0) {
+                        return <HeaderNews key={index} new={element} />
+                    } else {
+                        return <CardNew key={index} new={element} />
+                    }
+
                 })}
             </div>
         )
