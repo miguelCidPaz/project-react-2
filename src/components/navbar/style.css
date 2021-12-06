@@ -395,9 +395,19 @@
     align-items: center;
     width: 100%;
     gap: 10px;
+    flex-wrap: wrap;
     margin: auto;
     margin-bottom: 20px;
     margin-top: -40px;
+}
+
+.trendings div{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
 .trendings p{
