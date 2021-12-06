@@ -2,13 +2,16 @@
 
 /* Colores y efectos para los links */
 
-.partner-one{
+.partner-one, .partner-two, .partner-three, .partner-four,
+.partner-five, .partner-six, .partner-seven, .partner-eight{
     position: relative;
     background-color: #900B32;
     z-index: 100;
     cursor: pointer;
 }
-.partner-one::after{
+.partner-one::after, .partner-two::after, .partner-three::after,
+.partner-four::after, .partner-five::after, .partner-six::after,
+.partner-seven::after, .partner-eight::after{
     content: '';
     position: absolute;
     text-align: center;
@@ -24,7 +27,9 @@
     float: none;
 }
 
-.partner-one:hover::after{
+.partner-one:hover::after, .partner-two:hover::after, .partner-three:hover::after,
+.partner-four:hover::after, .partner-five:hover::after, .partner-six:hover::after,
+.partner-seven:hover::after, .partner-eight:hover::after{
     transition-duration: 0.5s;
     float: none;
     position: absolute;
@@ -33,223 +38,32 @@
 }
 
 .partner-two{
-    position: relative;
     background-color: #FFC914;
-    z-index: 100;
-    cursor: pointer;
-}
-
-.partner-two::after{
-    content: '';
-    position: absolute;
-    text-align: center;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 80%;
-    background-color: #434B54;
-    transition:height 1s;
-    z-index: -1;
-    float: none;
-}
-
-.partner-two:hover::after{
-    transition-duration: 0.5s;
-    float: none;
-    position: absolute;
-    height: 1px;
-    z-index: -1;
 }
 
 .partner-three{
-    position: relative;
     background-color: #003057;
-    z-index: 100;
-    cursor: pointer;
-}
-
-.partner-three::after{
-    content: '';
-    position: absolute;
-    text-align: center;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 80%;
-    background-color: #434B54;
-    transition:height 1s;
-    z-index: -1;
-    float: none;
-}
-
-.partner-three:hover::after{
-    transition-duration: 0.5s;
-    float: none;
-    position: absolute;
-    height: 1px;
-    z-index: -1;
 }
 
 
 .partner-four{
-    position: relative;
     background-color: #298CCD;
-    z-index: 100;
-    cursor: pointer;
 }
-
-.partner-four::after{
-    content: '';
-    position: absolute;
-    text-align: center;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 80%;
-    background-color: #434B54;
-    transition:height 1s;
-    z-index: -1;
-    float: none;
-}
-
-.partner-four:hover::after{
-    transition-duration: 0.5s;
-    float: none;
-    position: absolute;
-    height: 1px;
-    z-index: -1;
-}
-
 
 .partner-five{
-    position: relative;
     background-color: #76CFDB;
-    z-index: 100;
-    cursor: pointer;
-}
-
-.partner-five::after{
-    content: '';
-    position: absolute;
-    text-align: center;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 80%;
-    background-color: #434B54;
-    transition:height 1s;
-    z-index: -1;
-    float: none;
-}
-
-.partner-five:hover::after{
-    transition-duration: 0.5s;
-    float: none;
-    position: absolute;
-    height: 1px;
-    z-index: -1;
 }
 
 .partner-six{
-    position: relative;
     background-color: #F0CB11;
-    z-index: 100;
-    cursor: pointer;
-}
-
-.partner-six::after{
-    content: '';
-    position: absolute;
-    text-align: center;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 80%;
-    background-color: #434B54;
-    transition:height 1s;
-    z-index: -1;
-    float: none;
-}
-
-.partner-six:hover::after{
-    transition-duration: 0.5s;
-    float: none;
-    position: absolute;
-    height: 1px;
-    z-index: -1;
 }
 
 .partner-seven{
-    position: relative;
     background-color: #162133;
-    z-index: 100;
-    cursor: pointer;
 }
-
-.partner-seven::after{
-    content: '';
-    position: absolute;
-    text-align: center;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 80%;
-    background-color: #434B54;
-    transition:height 1s;
-    z-index: -1;
-    float: none;
-}
-
-.partner-seven:hover::after{
-    transition-duration: 0.5s;
-    float: none;
-    position: absolute;
-    height: 1px;
-    z-index: -1;
-}
-
 
 .partner-eight{
-    position: relative;
     background-color: #E80028;
-    z-index: 100;
-    cursor: pointer;
-}
-
-.partner-eight::after{
-    content: '';
-    position: absolute;
-    text-align: center;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 80%;
-    background-color: #434B54;
-    transition:height 1s;
-    z-index: -1;
-    float: none;
-}
-
-.partner-eight:hover::after{
-    transition-duration: 0.5s;
-    float: none;
-    position: absolute;
-    height: 1px;
-    z-index: -1;
 }
 
 .link-partner{
