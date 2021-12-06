@@ -462,6 +462,8 @@
     }
 
     .trendings p{
+        padding: 5px;
+        width: 100%;
         font-size: 10px;
     }
 }
