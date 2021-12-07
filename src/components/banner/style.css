@@ -1,0 +1,64 @@
+.content-banner{
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    height: 90px;
+    box-shadow: 0 0 4px grey;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.banner-frame{
+    display: flex;
+    padding: 5px;
+    width: 30%;
+    box-shadow: 0 0 4px grey;
+}
+
+.banner-img{
+    width: 100%;
+}
+
+.banner-text{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 0 4px grey;
+}
+
+.banner-message{
+    font-size: 15px;
+}
+
+.banner-trademark{
+    color: blue;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.banner-exit{
+    transition: 0.5s ease;
+    text-align: center;
+    box-shadow: 0 0 5px lightblue;
+    position: relative;
+    top: -17px;
+    left: 85%;
+    width: 30%;
+    cursor: pointer;
+}
+
+.banner-exit:hover{
+    background-color: red;
+    color: white;
+}
+
+.banner-action{
+    margin: auto;
+    padding: 15px;
+}
+
+.banner-action-p{
+    margin: auto;
+    margin-right: 20%;
+}

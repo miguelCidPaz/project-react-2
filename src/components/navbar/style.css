@@ -160,7 +160,7 @@
 .first-new::before, .second-new::before, .three-new::before{
     content: '';
     position: absolute;
-    top: 8%;
+    top: 26%;
     left: 15.7%;
     right: 0;
     bottom: 0;
