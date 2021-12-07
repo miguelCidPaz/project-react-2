@@ -1,4 +1,19 @@
 /* Estilo provisional */
+#root {
+    display: grid;
+    grid-template-columns: 8fr 3fr;
+}
+.aside-content {
+    margin-top: 20vh;
+}
+.aside-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    row-gap: 50px;
+}
 .main-content{
     display: flex;
     flex-direction: row;
@@ -131,5 +146,9 @@
         width: 30%;
         padding: 0px;
         padding-right: 5px;
+    }
+    #root {
+        display:flex;
+        flex-direction: column;
     }
 }
