@@ -8,6 +8,29 @@
     background-color: #F2F4F6;
 }
 
+.aside-content {
+    margin-top: 20vh;
+}
+
+.aside-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    row-gap: 50px;
+}
+
+.main-content{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #F2F4F6;
+}
+
 .main-content-column{
     display: flex;
     flex-direction: column;
