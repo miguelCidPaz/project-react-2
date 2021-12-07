@@ -93,6 +93,12 @@ export const dataBase = {
         Item8: { partner: "Tu Casa Roborock", color: "partner-eight" }
     },
 
+    banners: {
+        0: { img: "https://i.blogs.es/24386e/voxan-wattman-header/500_333.jpeg", text: "Ve tanto como quieras", mark: "HBO MAX", action: "Suscribete ya" },
+        1: { img: "https://i.blogs.es/5b6515/29527-original_jpg_92/500_333.jpeg", text: "Cuenta corriente OpenBank", mark: "OPENBANK", action: "Saber mas" },
+        2: { img: "https://i.blogs.es/a0e620/microsd-blur/500_333.jpg", text: "Pon un pajarillo en tu vida", mark: "Petirrojo", action: "Ad ficticio" }
+    },
+
     fastNews: {
         Item1: {
             description: "Estas son las multas y restricciones para patinetes electricos tras la nueva Ley de trafico",
