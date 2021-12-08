@@ -7,7 +7,7 @@
     width: 100%;
     background-color: #F2F4F6;
 }
-
+/* aside*/
 .aside-content {
     margin-top: 20vh;
 }
@@ -19,12 +19,21 @@
     align-items: center;
     text-align: center;
     row-gap: 50px;
+    padding: 0 2rem;
 }
-
-.main-content{
-
+.asideItemBody {
     display: flex;
     flex-direction: row;
+    background-color: #FFFFFF;
+    padding: 1rem 3rem;
+}
+/*fin aside*/
+.main-content{
+
+ /*    display: flex;
+    flex-direction: row; */
+    display: grid;
+    grid-template-columns: 5fr 1fr;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -41,10 +50,10 @@
 .main-list{
     display: flex;
     flex-direction: column;
-    width: 75%;
+    width: 90%;
     margin: auto;
-    gap: 0px 20px;
-    padding: 10px;
+  /*   gap: 0px 20px; */
+   /*  padding: 10px; */
     box-shadow: 0 0 5px white;
 }
 
@@ -238,5 +247,22 @@
 
     .categoria-card-text-header{
         font-size: 12px;
+    }
+    .main-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: #F2F4F6;
+    }
+    .aside-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        row-gap: 50px;
+        padding: 0 2rem;
     }
 }
