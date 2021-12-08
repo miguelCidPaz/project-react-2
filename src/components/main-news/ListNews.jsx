@@ -16,9 +16,11 @@ class ListNews extends Component {
     }
 
     fetchMoreData() {
+
         let dataload = Object.values(this.state.items)
         let datafresh = Object.values(this.props.news);
         let dataComplete = dataload.concat(datafresh);
+
         this.setState((prev) => ({
             items: { ...dataComplete },
             length: prev.length + 10
