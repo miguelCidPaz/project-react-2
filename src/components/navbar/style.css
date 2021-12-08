@@ -243,6 +243,10 @@
 
 @media (max-width:750px){
 
+    .label-partners{
+        display: none;
+    }
+
     .first-new::before, .second-new::before, .three-new::before{
         top: 60%;
         width: 31%;
