@@ -16,7 +16,7 @@
     flex-direction: row;
     align-self: center;
     justify-content: space-between;
-    width: 90%;
+    width: 70%;
     height: 50px;
     margin: auto;
     margin-top: 50px;
@@ -167,4 +167,23 @@
 
 .icon-6:hover{
     background-color: blueviolet;
+}
+
+@media (max-width:800px){
+    .nav-head-link{
+        font-size: 10px;
+    }
+
+    .content-main{
+        width: 40%;
+    }
+
+    .container-logo{
+        right: 15%;
+        width: 30%;
+    }
+
+    .container-logo img{
+        width: 100%;
+    }
 }
