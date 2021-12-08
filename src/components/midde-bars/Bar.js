@@ -12,7 +12,7 @@ class Bar extends React.Component {
         <div className={`middleBars ${this.props.data.class}`}>
             <div className="links-list">
                 <h4>{this.props.data.nav.tittle}</h4>
-                <div>
+                <div className="links">
                     {links.map((element,index) => {
                         return <p key={index}>{element}</p>
                     })}                   

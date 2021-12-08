@@ -21,12 +21,21 @@
     grid-template-columns: repeat(auto-fit, minmax(8rem, 2fr));
     column-gap: 20px;
     text-align: center;
+    margin-top: 10px;
 }
 .links-list {
     display:flex;
     flex-direction:column;
     row-gap: 10px;
     margin-left: 20px
+}
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-bottom: 1px solid #343B43;
+    border-top: 1px solid #343B43;
+    padding: 5px 0;
 }
 @media only screen and (min-width: 768px) {
     .middleBars {
@@ -35,5 +44,8 @@
         justify-content: space-evenly;
         padding: 2rem 5rem;
         column-gap: 20px;
+    }
+    .links {
+        flex-direction: column;
     }
 }
