@@ -14,11 +14,11 @@ class App extends Component {
                 <Banner ad={dataBase.banners} />
                 <NavBar partners={dataBase.partners} news={dataBase.fastNews} trends={dataBase.trending} />
                 <div className="main-content">
-                    <ListNews news={dataBase.ItemList} />
-                    <Aside data ={data}/>
+                    <ListNews news={dataBase.ItemList} ad={dataBase.banners} />
+                    <Aside data={data} />
                 </div>
-                <Bar data = {dataBase.selectionBar}/>
-                <Bar data = {dataBase.basicBa
+                <Bar data={dataBase.selectionBar} />
+                <Bar data={dataBase.basicBar} />
             </div>
         )
     }
