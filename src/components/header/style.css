@@ -169,21 +169,41 @@
     background-color: blueviolet;
 }
 
-@media (max-width:800px){
+@media (max-width:850px){
     .nav-head-link{
-        font-size: 10px;
+        font-size: 15px;
     }
 
     .content-main{
+        margin-left: auto;
         width: 40%;
     }
 
     .container-logo{
-        right: 15%;
-        width: 30%;
+        margin: auto;
+        margin-top: -40px;
     }
 
     .container-logo img{
+        width: 200px;
+    }
+    
+    .button-left, .button-right{
+        display: none;
+    }
+
+    .container-social-buttons{
+        display: none;
+    }
+
+    .social-icon{
+        display: none;
+    }
+
+    .container-nav-head{
+    gap: 10% 2%;
+        flex-wrap: wrap;
+        margin-top: -60px;
         width: 100%;
     }
 }
