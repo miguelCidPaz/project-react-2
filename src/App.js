@@ -4,6 +4,7 @@ import NavBar from './components/navbar/NavBar';
 import { dataBase } from './Data';
 import { data } from './components/aside/assets/asideItems';
 import Aside from './components/aside/Aside';
+import Bar from './components/midde-bars/Bar';
 import Banner from './components/banner/Banner';
 
 class App extends Component {
@@ -13,9 +14,11 @@ class App extends Component {
                 <Banner ad={dataBase.banners} />
                 <NavBar partners={dataBase.partners} news={dataBase.fastNews} trends={dataBase.trending} />
                 <div className="main-content">
-                    <ListNews news={dataBase.ItemList} ad={dataBase.banners} />
-                    <Aside data={data} />
+                    <ListNews news={dataBase.ItemList} />
+                    <Aside data ={data}/>
                 </div>
+                <Bar data = {dataBase.selectionBar}/>
+                <Bar data = {dataBase.basicBa
             </div>
         )
     }
