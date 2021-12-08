@@ -79,6 +79,12 @@
 .nav-head-link{
     font-size: 20px;
     color: white;
+    cursor: pointer;
+}
+
+.nav-head-link:hover{
+    text-decoration: underline;
+    text-shadow: 0 0 2px white;
 }
 
 .container-social-buttons{
