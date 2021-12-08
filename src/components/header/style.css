@@ -1,0 +1,189 @@
+@font-face {
+    font-family: icon;
+    src: url("../../res/Socialico-Regular.ttf");
+}
+
+.header-content{
+    display: flex;
+    flex-direction: column;
+    background-color: #161D25;
+    width: 100%;
+    height: 230px;
+}
+
+.content-main{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: space-between;
+    width: 70%;
+    height: 50px;
+    margin: auto;
+    margin-top: 50px;
+    border-bottom: 1px solid green;
+}
+
+.button-left, .button-right{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    top: -40px;
+    left: 40px;
+}
+
+.label-button{
+    color: white;
+    font-weight: bolder;
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.button-left::before, .button-right::before{
+    content:"R";
+    font-family: icon;
+    font-size: 50px;
+    color: #72DA38;
+    position: relative;
+    top: 38px;
+    right: 45px;
+}
+
+.button-right::before{
+    content:"F";
+    right: 0px;
+    left: 75px;
+}
+
+.container-logo img{
+    width: 500px;
+    position: relative;
+    top: -96%;
+    height: 100px;
+}
+
+.sub-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container-nav-head{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    margin: auto;
+    margin-top: 30px;
+    gap: 2%;
+}
+
+.nav-head-link{
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.nav-head-link:hover{
+    text-decoration: underline;
+    text-shadow: 0 0 2px white;
+}
+
+.container-social-buttons{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    gap: 1%;
+    width: 30%;
+}
+
+.social-icon p{
+    font-family: icon;
+    font-size: 50px;
+    font-weight: bolder;
+    color: #72DA38 !important;
+}
+
+/*Botones del top*/
+
+.content-buttons-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: #111111;
+    gap: 1%;
+    padding-left: 20px;
+    width: 100%;
+    height: 40px;
+}
+
+.content-buttons-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: icon;
+    padding-left: 30px;
+    gap: 2%;
+    width:100%;
+}
+
+.content-buttons-top *{
+    font-family: icon;
+}
+
+.icon-0, .icon-1, .icon-2, .icon-3 , .icon-4,
+.icon-5, .icon-6{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5 ease;
+    cursor: pointer;
+    padding: 5px 10px;
+    width: 100%;
+}
+
+.icon-0{
+    background-color: #72DA38;
+}
+
+.icon-1:hover{
+    background-color: red;
+}
+
+.icon-2:hover{
+    background-color: chartreuse;
+}
+
+.icon-3:hover{
+    background-color: salmon;
+}
+
+.icon-4:hover{
+    background-color: aqua;
+}
+
+.icon-5:hover{
+    background-color: #72DA38;
+}
+
+.icon-6:hover{
+    background-color: blueviolet;
+}
+
+@media (max-width:800px){
+    .nav-head-link{
+        font-size: 10px;
+    }
+
+    .content-main{
+        width: 40%;
+    }
+
+    .container-logo{
+        right: 15%;
+        width: 30%;
+    }
+
+    .container-logo img{
+        width: 100%;
+    }
+}

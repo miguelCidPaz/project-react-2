@@ -38,7 +38,7 @@ class ListNews extends Component {
                 <InfiniteScroll
                     dataLength={this.state.length}
                     next={this.fetchMoreData}
-                    hasMore={this.state.length < 30 ? true : false}
+                    hasMore={this.state.length < 20 ? true : false}
                     loader={<h4>Loading...</h4>}
                 >
                     {arr.map((element, index) => {
