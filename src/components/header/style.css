@@ -1,0 +1,74 @@
+@font-face {
+    font-family: icon;
+    src: url("../../res/Socialico-Regular.ttf");
+}
+
+.header-content{
+    display: flex;
+    flex-direction: column;
+    background-color: #161D25;
+    width: 100%;
+    height: 230px;
+}
+
+.content-buttons-top{
+    background-color: #111111;
+    width: 100%;
+    height: 30px;
+}
+
+.content-main{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: space-between;
+    width: 90%;
+    height: 50px;
+    margin: auto;
+    margin-top: 50px;
+    border-bottom: 1px solid green;
+}
+
+.container-button{
+    display: flex;
+    flex-direction: row;
+    width: 10%;
+}
+
+.button-left, .button-right{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    top: -40px;
+    left: 40px;
+}
+
+.label-button{
+    color: white;
+    font-weight: bolder;
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.button-left::before, .button-right::before{
+    content:"R";
+    font-family: icon;
+    font-size: 50px;
+    color: #72DA38;
+    position: relative;
+    top: 38px;
+    right: 45px;
+}
+
+.button-right::before{
+    content:"F";
+    right: 0px;
+    left: 75px;
+}
+
+.container-logo img{
+    width: 500px;
+    position: relative;
+    top: -96%;
+    height: 100px;
+}
