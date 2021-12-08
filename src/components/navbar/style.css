@@ -1,0 +1,300 @@
+/* CONTENTPARTNERS */
+
+/* Colores y efectos para los links */
+
+.partner-one, .partner-two, .partner-three, .partner-four,
+.partner-five, .partner-six, .partner-seven, .partner-eight{
+    position: relative;
+    background-color: #900B32;
+    z-index: 100;
+    cursor: pointer;
+}
+.partner-one::after, .partner-two::after, .partner-three::after,
+.partner-four::after, .partner-five::after, .partner-six::after,
+.partner-seven::after, .partner-eight::after{
+    content: '';
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80%;
+    background-color: #434B54;
+    transition:height 1s;
+    z-index: -1;
+    float: none;
+}
+
+.partner-one:hover::after, .partner-two:hover::after, .partner-three:hover::after,
+.partner-four:hover::after, .partner-five:hover::after, .partner-six:hover::after,
+.partner-seven:hover::after, .partner-eight:hover::after{
+    transition-duration: 0.5s;
+    float: none;
+    position: absolute;
+    height: 1px;
+    z-index: -1;
+}
+
+.partner-two{
+    background-color: #FFC914;
+}
+
+.partner-three{
+    background-color: #003057;
+}
+
+
+.partner-four{
+    background-color: #298CCD;
+}
+
+.partner-five{
+    background-color: #76CFDB;
+}
+
+.partner-six{
+    background-color: #F0CB11;
+}
+
+.partner-seven{
+    background-color: #162133;
+}
+
+.partner-eight{
+    background-color: #E80028;
+}
+
+.link-partner{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+    width: 10.5%;
+}
+
+/*Estilos para el menu de navegacion*/
+
+.principal-navbar-content{
+    width: 100%;
+    background-color: #161D25;
+}
+
+.navbar-content-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #434B54;
+    margin: auto;
+    width: 100%;
+}
+
+.menu-link-partner{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 40px;
+    gap: 2%;
+    margin: auto;
+}
+
+.link-partner p{
+    margin: auto;
+}
+
+.label-partner-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* NAVBARNEWS */
+
+.navbar-content{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 360px;
+    background-color: #161D25;
+}
+
+.fastnews-content{
+    display: flex;
+    flex-direction: row;
+    margin-top: -50px;
+    gap: 10px;
+    width: 70%;
+}
+
+.fastnew-frame, .first-new, .second-new, .three-new{
+    margin: auto;
+    width: 30%;
+    height: 250px;
+    padding: 10px;
+    background-color: #434B54;
+    cursor: pointer;
+    transition: 0.3s ease;
+    color: white;
+}
+
+.fastnew-frame img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fastnew-frame p{
+    position: relative;
+    font-size: 17px;
+    font-weight: bolder;
+    top: -140px;
+    margin: auto;
+    width: 90%;
+    z-index: 5;
+}
+
+.first-new::before, .second-new::before, .three-new::before{
+    content: '';
+    position: absolute;
+    top: 8%;
+    left: 15.7%;
+    right: 0;
+    bottom: 0;
+    width: 21.5%;
+    height: 31%;
+    background-color: rgb(50 46 46 / 49%);
+    z-index: 2;
+}
+
+.second-new::before{
+    left: 39.2%;
+}
+
+.three-new::before{
+    left: 62.8%;
+}
+
+.first-new:hover::before{
+    display: none;
+}
+
+.second-new:hover::before{
+    display: none;
+}
+
+.three-new:hover::before{
+    display: none;
+}
+
+.first-new:hover{
+    background-color: greenyellow;
+}
+
+.second-new:hover{
+    background-color: greenyellow;
+}
+
+.three-new:hover{
+    background-color: greenyellow;
+}
+
+.trendings{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: -40px;
+}
+
+.trendings div{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.trendings p{
+    font-size: 15px;
+    font-weight: bolder;
+    color: white;
+}
+
+.trend{
+    cursor: pointer;
+}
+
+.trend:hover{
+    color: honeydew;
+    text-decoration: underline;
+    text-shadow: 0 0 2px honeydew;
+}
+
+
+@media (max-width:750px){
+
+    .first-new::before, .second-new::before, .three-new::before{
+        width: 31%;
+        height: 240px;
+    }
+
+    .first-new::before{
+        left: 0%;
+    }
+
+    .second-new::before{
+        left: 34.5%;
+    }
+
+    .three-new::before{
+        left: 69%;
+    }
+
+    .link-partner p{
+        font-size: 10px;
+    }
+
+    .fastnews-content{
+        width: 100%;
+    }
+
+    .fastnew-frame{
+        height: 200px;
+    }
+
+    .fastnew-frame p{
+        top: -200px;
+        font-size: 15px;
+    }
+
+    .menu-link-partner{
+        width: 90%;
+        font-size: 12px;
+    }
+
+    .trendings{
+        width: 10%;
+        gap: 2px;
+        flex-wrap: wrap;
+    }
+    
+    .decoration{
+        display: none;
+    }
+
+    .trendings p{
+        padding: 5px;
+        width: 100%;
+        font-size: 10px;
+    }
+}
