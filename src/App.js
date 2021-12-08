@@ -5,18 +5,20 @@ import { dataBase } from './Data';
 import { data } from './components/aside/assets/asideItems';
 import Aside from './components/aside/Aside';
 import Bar from './components/midde-bars/Bar';
+import Banner from './components/banner/Banner';
 
 class App extends Component {
     render() {
         return (
             <div className="main-content-column">
+                <Banner ad={dataBase.banners} />
                 <NavBar partners={dataBase.partners} news={dataBase.fastNews} trends={dataBase.trending} />
                 <div className="main-content">
                     <ListNews news={dataBase.ItemList} />
                     <Aside data ={data}/>
                 </div>
                 <Bar data = {dataBase.selectionBar}/>
-                <Bar data = {dataBase.basicBar}/>
+                <Bar data = {dataBase.basicBa
             </div>
         )
     }
