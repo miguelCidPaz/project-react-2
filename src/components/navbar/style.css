@@ -244,8 +244,9 @@
 @media (max-width:750px){
 
     .first-new::before, .second-new::before, .three-new::before{
+        top: 60%;
         width: 31%;
-        height: 240px;
+        height: 200px;
     }
 
     .first-new::before{
@@ -296,5 +297,15 @@
         padding: 5px;
         width: 100%;
         font-size: 10px;
+    }
+
+    .fastnew-frame p{
+        top: -90%;
+    }
+}
+
+@media (max-height:700px){
+    .first-new::before, .second-new::before, .three-new::before{
+        top: 75%;
     }
 }
