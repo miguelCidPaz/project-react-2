@@ -11,7 +11,7 @@ class App extends Component {
     render() {
         return (
             <div className="main-content-column">
-                <Header mainButtons={dataBase.mainButtons} navHead={dataBase.navHeader} socialButtons={dataBase.socialButtons} />
+                <Header mainButtons={dataBase.mainButtons} navHead={dataBase.navHeader} socialButtons={dataBase.socialButtons} iconsTop={dataBase.iconsTop} />
                 <Banner ad={dataBase.banners} />
                 <NavBar partners={dataBase.partners} news={dataBase.fastNews} trends={dataBase.trending} />
                 <div className="main-content">

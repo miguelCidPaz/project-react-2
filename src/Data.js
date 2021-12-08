@@ -119,6 +119,37 @@ export const dataBase = {
 
     trending: ["Black Friday", "Teletrabajo", "Coche electrico", "Energia nuclear", "Xiaomi", "Patinete Electrico", "Auriculares", "Smartwatch", "Monitores", "Game Pass"],
 
+    iconsTop: {
+        item0: {
+            text: "A",
+            type: "icon-0"
+        },
+        item1: {
+            text: "B",
+            type: "icon-1"
+        },
+        item2: {
+            text: "C",
+            type: "icon-2"
+        },
+        item3: {
+            text: "D",
+            type: "icon-3"
+        },
+        item4: {
+            text: "F",
+            type: "icon-4"
+        },
+        item5: {
+            text: "G",
+            type: "icon-5"
+        },
+        item6: {
+            text: "H",
+            type: "icon-6"
+        },
+    },
+
     mainButtons: {
         button1: {
             text: "Menu",
