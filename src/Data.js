@@ -128,7 +128,17 @@ export const dataBase = {
             text: "Nuevo",
             type: "button-right"
         }
-    }
+    },
+
+    navHeader: ["Analisis", "Xataka Seleccion", "Moviles", "Ciencia", "Newsletter", "Regalos de navidad"],
+
+    socialButtons: {
+        0: { type: "social-icon", text: "a" },
+        1: { type: "social-icon", text: "b" },
+        2: { type: "social-icon", text: "c" },
+        3: { type: "social-icon", text: "d" },
+        4: { type: "social-icon", text: "e" },
+    },
 
     //Añadir mas conforme se necesite
 }

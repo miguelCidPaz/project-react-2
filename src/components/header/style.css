@@ -72,3 +72,24 @@
     top: -96%;
     height: 100px;
 }
+
+.container-nav-head{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 20px;
+    gap: 2%;
+}
+
+.nav-head-link{
+    font-size: 20px;
+    color: white;
+}
+
+.social-icon p{
+    font-family: icon;
+    font-size: 50px;
+    font-weight: bolder;
+    color: #72DA38 !important;
+}
