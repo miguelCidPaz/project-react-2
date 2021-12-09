@@ -7,7 +7,7 @@ class HeaderNews extends Component {
                 <div className="last-new-label"><p>Lo ultimo</p></div>
                 <div className="body-card-header">
                     <div className="card-img-header">
-                        <img src={this.props.new.image} alt="#" />
+                        <img src={this.props.new.image} alt="#" id="top-anchor" />
                     </div>
                     <div className="card-text-header">
                         <p className="description-card-text-header">{this.props.new.description}</p>
