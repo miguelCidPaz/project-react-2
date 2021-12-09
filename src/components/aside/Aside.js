@@ -7,8 +7,8 @@ class Aside extends React.Component {
         return (
         <div className="aside-content">
         <div className="aside-list">
-            {aside.map((element) => {
-                return <AsideItem element={element} />
+            {aside.map((element, index) => {
+                return <AsideItem element={element} key={index}/>
             })}
         </div>
     </div>            

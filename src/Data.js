@@ -244,6 +244,63 @@ export const dataBase = {
                 alt:'foto4'
             },
         }
+    },
+    footer : {
+        class:'footer',
+        tittle: 'webedia.',
+        lists: {
+            list1: {
+                tittle:'TECNOLOGÍA',
+                links: {
+                    link1:'Xataka',
+                    link2:'Xataka Móvil',
+                    link3:'Xataka Foto',
+                    link4:'Xataka Android',
+                    link5:'Xataka Smart Home',
+                    link6:'Xataka Windows',
+                    link7:'Xataka Ciencia',
+                    link8:'Applesfera',
+                    link9:'Genbeta',
+                    link10:'Magnet',
+                    link11:'Mundo Xiaomi',
+                }
+            },
+            list2: {
+                tittle:'VIDEOJUEGOS',
+                links: {
+                    link1:'3DJuegos',
+                    link2:'Vida Extra',
+                    link3:'IGN',
+                    link4:'Millenium',
+                    link5:'3DJuegos PC',
+                    link6:'3DJuegos Guías',
+                }
+            },
+            list3: {
+                tittle:'ENTRETENIMIENTO',
+                links: {
+                    link1:'Sensacine',
+                    link2:'Espinof',
+                }
+            },
+            list4: {
+                tittle:'GASTRONOMÍA',
+                links: {
+                    link1:'Directo al Paladar',
+                }
+            },
+            list5: {
+                tittle:'ESTILO DE VIDA',
+                links: {
+                    link1:'Vitónica',
+                    link2:'Trendencias',
+                    link3:'Trendencias Hombre',
+                    link4:'Decoesfera',
+                    link5:'Compradiccion',
+                    link6:'Poprosa',
+                }
+            }
+        }
     }
     //Añadir mas conforme se necesite
 }

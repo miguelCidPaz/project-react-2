@@ -6,7 +6,8 @@ import { data } from './components/aside/assets/asideItems';
 import Aside from './components/aside/Aside';
 import Bar from './components/midde-bars/Bar';
 import Banner from './components/banner/Banner';
-import Header from './components/header/Header'
+import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
 
 class App extends Component {
     render() {
@@ -21,6 +22,7 @@ class App extends Component {
                 </div>
                 <Bar data={dataBase.selectionBar} />
                 <Bar data={dataBase.basicBar} />
+                <Footer data={dataBase.footer} />
             </div>
         )
     }
