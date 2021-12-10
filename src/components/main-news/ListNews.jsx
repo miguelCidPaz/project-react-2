@@ -4,6 +4,7 @@ import HeaderNews from './HeaderNews';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import './styles.css';
 import Banner from "../banner/Banner";
+import Bar from '../midde-bars/Bar'
 
 class ListNews extends Component {
     constructor(props) {
@@ -27,11 +28,13 @@ class ListNews extends Component {
         }))
     }
 
+    //<Bar data={dataBase.selectionBar} />
+    //<Bar data={dataBase.basicBar} />
 
 
     render() {
         const arr = Object.values(this.state.items);
-        let count = 0;
+        let count = 0; let barCount = 0;
         return (
             <div className="main-list">
 
@@ -43,19 +46,28 @@ class ListNews extends Component {
                 >
                     {arr.map((element, index) => {
                         count++;
+                        barCount++;
                         if (count === 5) {
                             count = 0;
                             return <Banner key={index} ad={this.props.ad} />
+
+                        }
+
+                        if (barCount === 4) {
+                            return <div className="space"><Bar data={this.props.selectionBar} /> </div>
+                        } else if (barCount === 13) {
+                            return <div className="space"> <Bar data={this.props.basicBar} /> </div>
                         }
 
                         if (index === 0) {
-                            return <HeaderNews key={index} new={element} />
+                            return <div><HeaderNews key={index} new={element} /> </div>
                         } else {
                             return <CardNew key={index} new={element} />
                         }
 
                     })}
                 </InfiniteScroll>
+
             </div>
         )
     }
