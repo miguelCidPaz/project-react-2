@@ -47,17 +47,16 @@ class ListNews extends Component {
                     {arr.map((element, index) => {
                         count++;
                         barCount++;
-                        { console.log(barCount) }
                         if (count === 5) {
                             count = 0;
-                            return <div><Banner key={index} ad={this.props.ad} /> </div>
+                            return <Banner key={index} ad={this.props.ad} />
 
                         }
 
-                        if (barCount === 11) {
-                            return <Bar data={this.props.selectionBar} />
+                        if (barCount === 4) {
+                            return <div className="space"><Bar data={this.props.selectionBar} /> </div>
                         } else if (barCount === 13) {
-                            return <Bar data={this.props.basicBar} />
+                            return <div className="space"> <Bar data={this.props.basicBar} /> </div>
                         }
 
                         if (index === 0) {

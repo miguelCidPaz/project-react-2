@@ -1,17 +1,18 @@
 import React from 'react';
 import AsideItem from './AsideItems';
+import './style.css';
 
 class Aside extends React.Component {
     render() {
         let aside = this.props.data;
         return (
-        <div className="aside-content">
-        <div className="aside-list">
-            {aside.map((element, index) => {
-                return <AsideItem element={element} key={index}/>
-            })}
-        </div>
-    </div>            
+            <div className="aside-content">
+                <div className="aside-list">
+                    {aside.map((element, index) => {
+                        return <AsideItem element={element} key={index} />
+                    })}
+                </div>
+            </div>
         )
 
     }
