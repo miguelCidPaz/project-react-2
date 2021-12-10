@@ -209,7 +209,18 @@
     height: 500px;
 }
 
+@media (max-width:900px){
+    .space{
+        height: 650px;
+    }
+}
+
 @media (max-width:800px) {
+
+    .space{
+        height: 700px;
+    }
+
     .card-text{
         font-size: 10px;
         gap: 5px;
