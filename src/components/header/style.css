@@ -102,6 +102,11 @@
     color: #72DA38 !important;
 }
 
+.container-button{
+    position: relative;
+    left: -5%;
+}
+
 /*Botones del top*/
 
 .content-buttons-top{
