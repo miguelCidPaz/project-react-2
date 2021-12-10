@@ -54,13 +54,13 @@ class ListNews extends Component {
                         }
 
                         if (barCount === 4) {
-                            return <div className="space"><Bar data={this.props.selectionBar} /> </div>
+                            return <div className="space" key={index + "bar"}><Bar data={this.props.selectionBar} /> </div>
                         } else if (barCount === 13) {
-                            return <div className="space"> <Bar data={this.props.basicBar} /> </div>
+                            return <div className="space" key={index + "bar"}> <Bar data={this.props.basicBar} /> </div>
                         }
 
                         if (index === 0) {
-                            return <div><HeaderNews key={index} new={element} /> </div>
+                            return <HeaderNews key={index} new={element} />
                         } else {
                             return <CardNew key={index} new={element} />
                         }
