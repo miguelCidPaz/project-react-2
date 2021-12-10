@@ -8,6 +8,7 @@ import Bar from './components/midde-bars/Bar';
 import Banner from './components/banner/Banner';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
+import Videos from './components/videosBar/Videos';
 
 class App extends Component {
     render() {
@@ -22,6 +23,7 @@ class App extends Component {
                 </div>
                 <Bar data={dataBase.selectionBar} />
                 <Bar data={dataBase.basicBar} />
+                <Videos data={dataBase.videosBar} />
                 <Footer data={dataBase.footer} />
             </div>
         )
