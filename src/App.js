@@ -7,9 +7,11 @@ import Aside from './components/aside/Aside';
 import Banner from './components/banner/Banner';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
+import news from './Api';
 
 class App extends Component {
     render() {
+        console.log(news());
         return (
             <div className="main-content-column">
                 <Header mainButtons={dataBase.mainButtons} navHead={dataBase.navHeader} socialButtons={dataBase.socialButtons} iconsTop={dataBase.iconsTop} />

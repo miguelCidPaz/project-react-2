@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+# Para evitar filtrar credencial
+/src/key.js
+
 # testing
 /coverage
 
