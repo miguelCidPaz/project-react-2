@@ -17,10 +17,9 @@ class ListNews extends Component {
     }
 
     fetchMoreData() {
-
-        let dataload = Object.values(this.state.items)
+        let dataActual = Object.values(this.state.items)
         let datafresh = Object.values(this.props.news);
-        let dataComplete = dataload.concat(datafresh);
+        const dataComplete = dataActual.concat(datafresh)
 
         this.setState((prev) => ({
             items: { ...dataComplete },
@@ -51,7 +50,7 @@ class ListNews extends Component {
                 <InfiniteScroll
                     dataLength={this.state.length}
                     next={this.fetchMoreData}
-                    hasMore={this.state.length < 30 ? true : false}
+                    hasMore={this.state.length < 20 ? true : false}
                     loader={<h4>Loading...</h4>}
                     pullDownToRefreshThreshold={90}
                 >
@@ -60,7 +59,7 @@ class ListNews extends Component {
                         barCount++;
                         if (count === 5) {
                             count = 0;
-                            return <Banner key={index} ad={this.props.ad} />
+                            return <div key={"div" + index}><Banner key={"ad" + index} ad={this.props.ad} /><CardNew key={index} new={element} /></div>
 
                         }
 

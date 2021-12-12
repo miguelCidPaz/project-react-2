@@ -8,7 +8,7 @@ class CardNew extends Component {
             <div className="body-card">
                 <div className="card-text">
                     <p className="description-card-text">{this.props.new.title}</p>
-                    <p className="categoria-card-text">{this.props.new.author}</p>
+                    <p className="categoria-card-text">{this.props.new.author !== null ? this.props.new.author : "Anon"}</p>
                     <p className="cuerpo-card-text">{this.props.new.description}<button className="read-more">Leer Mas &gt;&gt;</button></p>
                     <p className="footer-card-text"><button className="comments-card-text">💬</button>{this.props.new.footer}</p>
                 </div>

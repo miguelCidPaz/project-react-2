@@ -7,7 +7,6 @@ import Aside from './components/aside/Aside';
 import Banner from './components/banner/Banner';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
-import news from './Api';
 import axios from 'axios';
 import { APIKEY } from './key';
 
@@ -17,18 +16,21 @@ class App extends Component {
         this.state = {
             news: []
         }
+        this.fetchMoreData = this.fetchMoreData.bind(this)
     }
 
     async componentDidMount() {
+        this.fetchMoreData()
+    }
+
+    async fetchMoreData() {
         const resp = await axios.get('https://newsapi.org/v2/top-headlines?category=technology&apiKey=' + APIKEY)
-        //this.setState({ ...resp.data.articles })
         this.setState((prevState) => ({
             news: { ...resp.data.articles }
         }))
     }
 
     render() {
-        console.log(news());
         return (
             <div className="main-content-column">
                 <Header mainButtons={dataBase.mainButtons} navHead={dataBase.navHeader} socialButtons={dataBase.socialButtons} iconsTop={dataBase.iconsTop} />
