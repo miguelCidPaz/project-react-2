@@ -28,9 +28,6 @@ class ListNews extends Component {
         }))
     }
 
-    //<Bar data={dataBase.selectionBar} />
-    //<Bar data={dataBase.basicBar} />
-
 
     render() {
         const arr = Object.values(this.state.items);
