@@ -279,3 +279,9 @@
         padding: 0 2rem;
     }
 }
+
+@media (max-width:500px){
+    .space{
+        height: 900px;
+    }
+}

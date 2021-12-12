@@ -10,17 +10,16 @@ class ListNews extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            items: { ...this.props.news },
+            items: {},
             length: 10
         }
         this.fetchMoreData = this.fetchMoreData.bind(this)
     }
 
     fetchMoreData() {
-
-        let dataload = Object.values(this.state.items)
+        let dataActual = Object.values(this.state.items)
         let datafresh = Object.values(this.props.news);
-        let dataComplete = dataload.concat(datafresh);
+        const dataComplete = dataActual.concat(datafresh)
 
         this.setState((prev) => ({
             items: { ...dataComplete },
@@ -28,9 +27,19 @@ class ListNews extends Component {
         }))
     }
 
-    //<Bar data={dataBase.selectionBar} />
-    //<Bar data={dataBase.basicBar} />
+    async componentDidMount() {
+        await this.setState(() => ({
+            items: { ...this.props.news }
+        }))
+    }
 
+    componentDidUpdate(prevProps) {
+        if (this.props.news !== prevProps.news) {
+            this.setState(() => ({
+                items: { ...this.props.news }
+            }))
+        }
+    }
 
     render() {
         const arr = Object.values(this.state.items);
@@ -43,13 +52,14 @@ class ListNews extends Component {
                     next={this.fetchMoreData}
                     hasMore={this.state.length < 20 ? true : false}
                     loader={<h4>Loading...</h4>}
+                    pullDownToRefreshThreshold={90}
                 >
                     {arr.map((element, index) => {
                         count++;
                         barCount++;
                         if (count === 5) {
                             count = 0;
-                            return <Banner key={index} ad={this.props.ad} />
+                            return <div key={"div" + index}><Banner key={"ad" + index} ad={this.props.ad} /><CardNew key={index} new={element} /></div>
 
                         }
 
