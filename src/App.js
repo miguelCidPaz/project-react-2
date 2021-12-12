@@ -25,7 +25,6 @@ class App extends Component {
         this.setState((prevState) => ({
             news: { ...resp.data.articles }
         }))
-        console.log(this.state)
     }
 
     render() {

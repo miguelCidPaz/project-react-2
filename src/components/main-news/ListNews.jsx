@@ -10,7 +10,7 @@ class ListNews extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            items: { ...this.props.news },
+            items: {},
             length: 10
         }
         this.fetchMoreData = this.fetchMoreData.bind(this)
@@ -28,6 +28,19 @@ class ListNews extends Component {
         }))
     }
 
+    async componentDidMount() {
+        await this.setState(() => ({
+            items: { ...this.props.news }
+        }))
+    }
+
+    componentDidUpdate(prevProps) {
+        if (this.props.news !== prevProps.news) {
+            this.setState(() => ({
+                items: { ...this.props.news }
+            }))
+        }
+    }
 
     render() {
         const arr = Object.values(this.state.items);
@@ -38,8 +51,9 @@ class ListNews extends Component {
                 <InfiniteScroll
                     dataLength={this.state.length}
                     next={this.fetchMoreData}
-                    hasMore={this.state.length < 20 ? true : false}
+                    hasMore={this.state.length < 30 ? true : false}
                     loader={<h4>Loading...</h4>}
+                    pullDownToRefreshThreshold={90}
                 >
                     {arr.map((element, index) => {
                         count++;
