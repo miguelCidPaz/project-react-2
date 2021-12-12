@@ -56,7 +56,24 @@ img {
     max-width: fit-content;
     height:100%;
     width: 100%;
-
+}
+.mainVideo {
+    z-index: 1;
+}
+.videoHidden {
+    display: none;
+    
+}
+.videoDiv {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 50%;
+    left: -50%;
+    transform: translate(-100%, -100%); 
+    z-index: 0;
+    width:20rem; 
+    height:18rem;
+    visibility: visible;
 }
 @media only screen and (min-width: 1200px) {
     .videos-box {
@@ -84,5 +101,7 @@ img {
     .mainVideo {
         width: 100%;
     } 
-
+    .showingVideos {
+        transform: translateX(-200%);
+    }
 }
