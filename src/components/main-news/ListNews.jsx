@@ -48,6 +48,7 @@ class ListNews extends Component {
             <div className="main-list">
 
                 <InfiniteScroll
+                    className="infinite"
                     dataLength={this.state.length}
                     next={this.fetchMoreData}
                     hasMore={this.state.length < 20 ? true : false}

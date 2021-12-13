@@ -4,9 +4,11 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
     width: 100%;
     background-color: #F2F4F6;
 }
+
 /* aside*/
 .aside-content {
     margin-top: 20vh;
@@ -51,17 +53,46 @@
     display: flex;
     flex-direction: column;
     width: 90%;
+    overflow: hidden;
     margin: auto;
 }
 
-.body-card{
+.infinite{
+    overflow: hidden !important;
+}
+
+.body-card, .body-card-minimize{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    transition: 0.5s ease;
     width: 100%;
     height: 40%;
     background-color: white;
-    box-shadow: 0 0 5px grey;
+    box-shadow: 0 0 2px grey;
+}
+
+.body-card-minimize{
+    height: 40px;
+}
+
+.pseudo-description{
+    font-size: 20px;
+    font-weight: bolder;
+    margin: auto;
+    padding: 2px 5px;
+}
+
+.body-card-minimize .control{
+    margin-top: 10px;
+}
+
+.body-card-minimize .control p{
+    top: 0px;
+    font-size: 20px;
+    padding-bottom: 20px;
+    margin-top: -2px;
+    font-weight: bolder;
 }
 
 .card-img{
@@ -204,6 +235,28 @@
     color: green;
 }
 
+.control{
+    height: 20px;
+    width: 20px;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    background-color: #72DA38;
+    border-radius: 2px;
+}
+
+.control p{
+    display: block;
+    position: relative;
+    top: -24px;
+}
+
+.control:hover{
+    cursor: pointer;
+    box-shadow: 0 0 5px #72DA38;
+    text-shadow: 0 0 5px white;
+}
+
 .space{
     width: 100%;
     height: 500px;
@@ -216,6 +269,10 @@
 }
 
 @media (max-width:800px) {
+
+    .body-card-minimize p{
+        font-size: 15px;
+    }
 
     .space{
         height: 700px;
