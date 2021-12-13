@@ -15,7 +15,7 @@ class NavBarTrends extends Component {
         const arr = this.props.trends
         return (
             <div className="trendings">
-                <p>🔥 Hoy se habla de &gt;</p>
+                <p>🔥 Categorias &gt;</p>
                 {arr.map((element, index) => {
                     if (index === 0) {
                         return <div key={element}>
