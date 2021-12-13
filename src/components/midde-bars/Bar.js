@@ -14,7 +14,6 @@ class Bar extends React.Component {
                     <h4>{this.props.controls.nav.title}</h4>
                     <div className="links">
                         {links.map((element, index) => {
-                            console.log(element)
                             return <p key={index}>{element}</p>
                         })}
                     </div>

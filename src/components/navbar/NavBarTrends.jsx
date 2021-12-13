@@ -13,7 +13,6 @@ class NavBarTrends extends Component {
 
     render() {
         const arr = this.props.trends
-        console.log(arr)
         return (
             <div className="trendings">
                 <p>🔥 Hoy se habla de &gt;</p>
