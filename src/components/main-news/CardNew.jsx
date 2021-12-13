@@ -27,7 +27,7 @@ class CardNew extends Component {
                 {this.state.minimize ? <p className="pseudo-description">{this.props.new.title}</p> : <><div className="card-text">
                     <p className="description-card-text">{this.props.new.title}</p>
                     <p className="categoria-card-text">{this.props.category}</p>
-                    <p className="cuerpo-card-text">{this.props.new.description}<a href={this.props.new.url} target="_blank" className="read-more">Leer Mas &gt;&gt;</a></p>
+                    <p className="cuerpo-card-text">{this.props.new.description}<a href={this.props.new.url} target="_blank" rel="noreferrer" className="read-more">Leer Mas &gt;&gt;</a></p>
                     <p className="footer-card-text"><button className="comments-card-text">💬</button>{this.props.new.footer}</p>
                 </div><div className="card-img">
                         <img src={this.props.new.urlToImage !== null ? this.props.new.urlToImage : photoDefault} alt="#" />
