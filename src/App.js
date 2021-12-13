@@ -4,13 +4,33 @@ import NavBar from './components/navbar/NavBar';
 import { dataBase } from './Data';
 import { data } from './components/aside/assets/asideItems';
 import Aside from './components/aside/Aside';
-import Bar from './components/midde-bars/Bar';
 import Banner from './components/banner/Banner';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import Videos from './components/videosBar/Videos';
+import axios from 'axios';
+import { APIKEY } from './key';
 
 class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            news: []
+        }
+        this.fetchMoreData = this.fetchMoreData.bind(this)
+    }
+
+    async componentDidMount() {
+        this.fetchMoreData()
+    }
+
+    async fetchMoreData() {
+        const resp = await axios.get('https://newsapi.org/v2/top-headlines?category=technology&apiKey=' + APIKEY)
+        this.setState((prevState) => ({
+            news: { ...resp.data.articles }
+        }))
+    }
+
     render() {
         return (
             <div className="main-content-column">
@@ -18,11 +38,10 @@ class App extends Component {
                 <Banner ad={dataBase.banners} />
                 <NavBar partners={dataBase.partners} news={dataBase.fastNews} trends={dataBase.trending} />
                 <div className="main-content">
-                    <ListNews news={dataBase.ItemList} ad={dataBase.banners} />
+                    <ListNews news={this.state.news} ad={dataBase.banners} selectionBar={dataBase.selectionBar} basicBar={dataBase.basicBar} />
                     <Aside data={data} />
                 </div>
-                <Bar data={dataBase.selectionBar} />
-                <Bar data={dataBase.basicBar} />
+
                 <Videos data={dataBase.videosBar} />
                 <Footer data={dataBase.footer} />
             </div>
