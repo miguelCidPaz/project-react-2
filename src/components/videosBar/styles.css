@@ -78,6 +78,7 @@ img {
 }
 .videoDiv p:hover {
     cursor: pointer;
+    background-color: aqua;
 }
 .videoHidden {
     display: none;
