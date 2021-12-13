@@ -4,16 +4,22 @@ import logoyoutube from './assets/descarga.png';
 
 class Videos extends React.Component {
     render() {
-
         const videos = Object.values(this.props.data.videos.secondary);
         function resize(e){
-            console.log(e.target.parentNode.parentNode);
-            let videoToShowDiv = e.target.parentNode.parentNode;
-            let videoToShow = videoToShowDiv.querySelector('.videoDiv');
-            console.log(videoToShow);
+            let videoToShowDiv,videoToShow,aux;
+            console.log(e.target.innerHTML);
+            if (e.target.innerHTML ==='CERRAR(X)') {
+                videoToShow = e.target.parentNode;
+                aux = videoToShow.firstChild.src.slice(0,-11);
+                videoToShow.firstChild.src = aux;
+            }
+            else {
+                videoToShowDiv = e.target.parentNode.parentNode;
+                videoToShow = videoToShowDiv.querySelector('.videoDiv');
+                aux = videoToShow.firstChild.src += '?autoplay=1'
+            }
             videoToShow.classList.toggle('videoHidden'); 
-        }
-
+       }
         return (
             
         <div className={this.props.data.class}>
@@ -25,7 +31,7 @@ class Videos extends React.Component {
                 <div className="mainVideo">{this.props.data.videos.main}</div>
                 <div className="videos-box">
                     {videos.map((element,index) => {
-                    return <div className='videos-box-individual'key={index}><div className='videoDiv videoHidden'>{element.video}</div> <div><img src={element.img} onClick={resize} alt='video youtube'/></div><p>{element.text}</p></div>
+                    return <div className='videos-box-individual'key={index}><div className='videoDiv videoHidden'>{element.video}<p onClick={resize}>CERRAR(X)</p></div> <div><img src={element.img} onClick={resize} alt='video youtube'/></div><p>{element.text}</p></div>
                     })}  
                 </div>
             </div>

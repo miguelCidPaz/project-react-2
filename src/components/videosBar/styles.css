@@ -45,35 +45,42 @@ img {
     background: white;
     padding: 1rem;
     display : grid;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 45% 55%;
     column-gap: 1rem;
-    height: 14rem;
+    height: 10rem;
     color: black;
 }
 
-.videos-box-individual iframe { 
+.videos-box-individual img { 
     object-fit: cover;
     max-width: fit-content;
     height:100%;
     width: 100%;
 }
-.mainVideo {
+.videoDiv {
+    display:flex;
+    position:fixed;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
     z-index: 1;
+    width:40rem; 
+    height:24rem;
+    margin-left: 0.8rems;
+}
+.videoDiv p {
+    background-color: white;
+    transform: translate(-105%,-5%);
+    height: fit-content;
+    color: black;
+    font-size:0.8rem;
+    z-index: 2;
+}
+.videoDiv p:hover {
+    cursor: pointer;
 }
 .videoHidden {
     display: none;
-    
-}
-.videoDiv {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 50%;
-    left: -50%;
-    transform: translate(-100%, -100%); 
-    z-index: 0;
-    width:20rem; 
-    height:18rem;
-    visibility: visible;
 }
 @media only screen and (min-width: 1200px) {
     .videos-box {
@@ -86,11 +93,11 @@ img {
         row-gap: 1rem;
     }
     .videos {
-        width: 90%;
+        width: 100%;
         display: grid;
-        grid-template-columns: 65% 35%;
+        grid-template-columns: 60% 40%;
         justify-items: center;
-        column-gap: 2rem;
+        column-gap: 1.5rem;
         margin-top: 2rem;
     }
     .mainVideo iframe {
@@ -101,7 +108,4 @@ img {
     .mainVideo {
         width: 100%;
     } 
-    .showingVideos {
-        transform: translateX(-200%);
-    }
 }
