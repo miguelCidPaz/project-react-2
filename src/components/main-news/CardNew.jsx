@@ -5,7 +5,7 @@ class CardNew extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            minimize: true
+            minimize: false
         }
         this.minimize = this.minimize.bind(this);
     }
