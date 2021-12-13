@@ -26,8 +26,8 @@ class CardNew extends Component {
                 <div onClick={this.minimize} className="control"><p>{this.state.minimize ? "+" : "-"}</p></div>
                 {this.state.minimize ? <p className="pseudo-description">{this.props.new.title}</p> : <><div className="card-text">
                     <p className="description-card-text">{this.props.new.title}</p>
-                    <p className="categoria-card-text">{this.props.new.author !== null ? this.props.new.author : "Anon"}</p>
-                    <p className="cuerpo-card-text">{this.props.new.description}<button className="read-more">Leer Mas &gt;&gt;</button></p>
+                    <p className="categoria-card-text">{this.props.category}</p>
+                    <p className="cuerpo-card-text">{this.props.new.description}<a href={this.props.new.url} target="_blank" className="read-more">Leer Mas &gt;&gt;</a></p>
                     <p className="footer-card-text"><button className="comments-card-text">💬</button>{this.props.new.footer}</p>
                 </div><div className="card-img">
                         <img src={this.props.new.urlToImage !== null ? this.props.new.urlToImage : photoDefault} alt="#" />

@@ -27,7 +27,7 @@ class HeaderNews extends Component {
                         <img src={this.props.new.urlToImage !== null ? this.props.new.urlToImage : photoDefault} alt="#" id="top-anchor" />
                     </div><div className="card-text-header">
                             <p className="description-card-text-header">{this.props.new.title}</p>
-                            <p className="categoria-card-text-header">{this.props.new.author !== null ? this.props.new.author : "Anon"}</p>
+                            <p className="categoria-card-text-header">{this.props.category}</p>
                             <p className="cuerpo-card-text-header">{this.props.new.description}<button className="read-more">Leer Mas &gt;&gt;</button></p>
                             <p className="footer-card-text-header"><button className="comments-card-text">💬</button>{this.props.new.footer}</p>
                         </div></>}
