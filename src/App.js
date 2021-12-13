@@ -15,9 +15,11 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            news: []
+            news: [],
+            category: "technology"
         }
         this.fetchMoreData = this.fetchMoreData.bind(this)
+        this.changeCategory = this.changeCategory.bind(this)
     }
 
     async componentDidMount() {
@@ -25,10 +27,62 @@ class App extends Component {
     }
 
     async fetchMoreData() {
-        const resp = await axios.get('https://newsapi.org/v2/top-headlines?category=technology&apiKey=' + APIKEY)
+        const resp = await axios.get(`https://newsapi.org/v2/top-headlines?category=${this.state.category}&apiKey=` + APIKEY)
         this.setState((prevState) => ({
             news: { ...resp.data.articles }
         }))
+    }
+
+    changeCategory(value) {
+        switch (value) {
+
+            case 0:
+                this.setState(() => ({
+                    category: "business"
+                }))
+                break;
+
+            case 1:
+                this.setState(() => ({
+                    category: "entertainment"
+                }))
+                break;
+
+            case 2:
+                this.setState(() => ({
+                    category: "general"
+                }))
+                break;
+
+            case 3:
+                this.setState(() => ({
+                    category: "health"
+                }))
+                break;
+
+            case 4:
+                this.setState(() => ({
+                    category: "science"
+                }))
+                break;
+
+            case 5:
+                this.setState(() => ({
+                    category: "sports"
+                }))
+                break;
+
+            case 6:
+                this.setState(() => ({
+                    category: "technology"
+                }))
+                break;
+
+            default:
+                this.setState(() => ({
+                    category: "technology"
+                }))
+        }
     }
 
     render() {
@@ -36,7 +90,7 @@ class App extends Component {
             <div className="main-content-column">
                 <Header mainButtons={dataBase.mainButtons} navHead={dataBase.navHeader} socialButtons={dataBase.socialButtons} iconsTop={dataBase.iconsTop} />
                 <Banner ad={dataBase.banners} />
-                <NavBar partners={dataBase.partners} news={dataBase.fastNews} trends={dataBase.trending} />
+                <NavBar searchCategory={this.changeCategory} partners={dataBase.partners} news={dataBase.fastNews} trends={dataBase.trending} />
                 <div className="main-content">
                     <ListNews news={this.state.news} ad={dataBase.banners} selectionBar={dataBase.selectionBar} basicBar={dataBase.basicBar} />
                     <Aside data={data} />

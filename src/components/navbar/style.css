@@ -231,10 +231,15 @@
 }
 
 .trend{
+    font-size: 15px;
+    font-weight: bolder;
+    color: white;
     cursor: pointer;
+    list-style: none;
 }
 
 .trend:hover{
+    text-decoration: underline;
     color: honeydew;
     text-decoration: underline;
     text-shadow: 0 0 2px honeydew;
@@ -297,7 +302,7 @@
         display: none;
     }
 
-    .trendings p{
+    .trendings li{
         padding: 5px;
         width: 100%;
         font-size: 10px;
