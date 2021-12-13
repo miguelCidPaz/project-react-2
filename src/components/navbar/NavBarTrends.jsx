@@ -7,7 +7,8 @@ class NavBarTrends extends Component {
     }
 
     changeCategory(e) {
-        console.log(e.target.value)
+        const value = e.target.value
+        this.props.changeCategory(value)
     }
 
     render() {

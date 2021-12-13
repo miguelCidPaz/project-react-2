@@ -9,7 +9,7 @@ class NavBar extends Component {
             <div className="principal-navbar-content">
                 <ContentPartners partners={this.props.partners} />
                 <NavBarNews news={this.props.news} />
-                <NavBarTrends searchCategory={this.props.changeCategory} trends={this.props.trends} />
+                <NavBarTrends changeCategory={this.props.changeCategory} trends={this.props.trends} />
             </div>
         )
     }

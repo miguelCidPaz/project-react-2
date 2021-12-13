@@ -34,6 +34,7 @@ class App extends Component {
     }
 
     changeCategory(value) {
+
         switch (value) {
 
             case 0:
@@ -83,6 +84,8 @@ class App extends Component {
                     category: "technology"
                 }))
         }
+
+        this.fetchMoreData();
     }
 
     render() {
@@ -90,7 +93,7 @@ class App extends Component {
             <div className="main-content-column">
                 <Header mainButtons={dataBase.mainButtons} navHead={dataBase.navHeader} socialButtons={dataBase.socialButtons} iconsTop={dataBase.iconsTop} />
                 <Banner ad={dataBase.banners} />
-                <NavBar searchCategory={this.changeCategory} partners={dataBase.partners} news={dataBase.fastNews} trends={dataBase.trending} />
+                <NavBar changeCategory={this.changeCategory} partners={dataBase.partners} news={dataBase.fastNews} trends={dataBase.trending} />
                 <div className="main-content">
                     <ListNews news={this.state.news} ad={dataBase.banners} selectionBar={dataBase.selectionBar} basicBar={dataBase.basicBar} />
                     <Aside data={data} />
