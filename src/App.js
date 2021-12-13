@@ -7,6 +7,7 @@ import Aside from './components/aside/Aside';
 import Banner from './components/banner/Banner';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
+import Videos from './components/videosBar/Videos';
 import axios from 'axios';
 import { APIKEY } from './key';
 
@@ -40,6 +41,8 @@ class App extends Component {
                     <ListNews news={this.state.news} ad={dataBase.banners} selectionBar={dataBase.selectionBar} basicBar={dataBase.basicBar} />
                     <Aside data={data} />
                 </div>
+
+                <Videos data={dataBase.videosBar} />
                 <Footer data={dataBase.footer} />
             </div>
         )

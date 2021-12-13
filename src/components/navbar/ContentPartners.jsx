@@ -8,7 +8,7 @@ class ContentPartners extends Component {
             <div className="navbar-content-links">
                 <nav className="menu-link-partner">
                     <div className="label-partner-container">
-                        <p className="label-partners" id="top-anchor">Partners: </p>
+                        <p className="label-partners">Partners: </p>
                     </div>
                     {arr.map((element, index) => {
                         return <div key={index} className={`link-partner ${element.color}`}>
