@@ -110,7 +110,7 @@ class App extends Component {
                 <NavBar changeCategory={this.changeCategory} partners={dataBase.partners} news={this.state.news} trends={dataBase.trending} />
                 <div className="main-content">
                     <ListNews category={this.state.userCategory} news={this.state.news} ad={dataBase.banners} selectionBar={dataBase.selectionBar} basicBar={dataBase.basicBar} />
-                    <Aside data={data} />
+                    <Aside data={this.state.news} />
                 </div>
 
                 <Videos data={dataBase.videosBar} />
