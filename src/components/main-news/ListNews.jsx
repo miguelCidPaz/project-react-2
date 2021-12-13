@@ -28,17 +28,15 @@ class ListNews extends Component {
     }
 
     async componentDidMount() {
-        await this.setState(() => ({
+        this.setState(() => ({
             items: { ...this.props.news }
         }))
     }
 
-    componentDidUpdate(prevProps) {
+    async componentDidUpdate(prevProps) {
         if (this.props.news !== prevProps.news) {
             this.setState(() => ({
-                items: { ...this.props.news }
-            }))
-            this.setState(() => ({
+                items: { ...this.props.news },
                 length: 10
             }))
         }
