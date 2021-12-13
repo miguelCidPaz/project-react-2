@@ -38,6 +38,9 @@ class ListNews extends Component {
             this.setState(() => ({
                 items: { ...this.props.news }
             }))
+            this.setState(() => ({
+                length: 10
+            }))
         }
     }
 
