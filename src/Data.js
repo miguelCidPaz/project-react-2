@@ -35,7 +35,7 @@ export const dataBase = {
         }
     },
 
-    trending: ["Empresa", "Entretenimiento", "General", "Medicina", "Deportes", "Tecnologia"],
+    trending: ["Empresa", "Entretenimiento", "General", "Salud", "Ciencia", "Deportes", "Tecnologia"],
 
     iconsTop: {
         item0: {

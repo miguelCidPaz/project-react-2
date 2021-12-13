@@ -16,7 +16,8 @@ class App extends Component {
         super(props);
         this.state = {
             news: [],
-            category: "technology"
+            category: "technology",
+            userCategory: "Tecnologia"
         }
         this.fetchMoreData = this.fetchMoreData.bind(this)
         this.changeCategory = this.changeCategory.bind(this)
@@ -39,53 +40,66 @@ class App extends Component {
 
             case 0:
                 this.setState(() => ({
-                    category: "business"
+                    category: "business",
+                    userCategory: "Empresa"
                 }))
                 break;
 
             case 1:
                 this.setState(() => ({
-                    category: "entertainment"
+                    category: "entertainment",
+                    userCategory: "Entretenimiento"
                 }))
                 break;
 
             case 2:
                 this.setState(() => ({
-                    category: "general"
+                    category: "general",
+                    userCategory: "General"
                 }))
                 break;
 
             case 3:
                 this.setState(() => ({
-                    category: "health"
+                    category: "health",
+                    userCategory: "Salud"
                 }))
                 break;
 
             case 4:
                 this.setState(() => ({
-                    category: "science"
+                    category: "science",
+                    userCategory: "Ciencia"
                 }))
                 break;
 
             case 5:
                 this.setState(() => ({
-                    category: "sports"
+                    category: "sports",
+                    userCategory: "Deportes"
                 }))
                 break;
 
             case 6:
                 this.setState(() => ({
-                    category: "technology"
+                    category: "technology",
+                    userCategory: "Tecnologia"
                 }))
                 break;
 
             default:
                 this.setState(() => ({
-                    category: "technology"
+                    category: "technology",
+                    userCategory: "Tecnologia"
                 }))
         }
 
-        this.fetchMoreData();
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        if (this.state.category !== prevState.category) {
+            this.fetchMoreData();
+        }
     }
 
     render() {
@@ -95,7 +109,7 @@ class App extends Component {
                 <Banner ad={dataBase.banners} />
                 <NavBar changeCategory={this.changeCategory} partners={dataBase.partners} news={dataBase.fastNews} trends={dataBase.trending} />
                 <div className="main-content">
-                    <ListNews news={this.state.news} ad={dataBase.banners} selectionBar={dataBase.selectionBar} basicBar={dataBase.basicBar} />
+                    <ListNews category={this.state.userCategory} news={this.state.news} ad={dataBase.banners} selectionBar={dataBase.selectionBar} basicBar={dataBase.basicBar} />
                     <Aside data={data} />
                 </div>
 

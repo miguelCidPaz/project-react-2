@@ -61,7 +61,7 @@ class ListNews extends Component {
                         barCount++;
                         if (count === 5) {
                             count = 0;
-                            return <div key={"div" + index}><Banner key={"ad" + index} ad={this.props.ad} /><CardNew key={index} new={element} /></div>
+                            return <div key={"div" + index}><Banner key={"ad" + index} ad={this.props.ad} /><CardNew category={this.props.category} key={index} new={element} /></div>
 
                         }
 
@@ -72,9 +72,9 @@ class ListNews extends Component {
                         }
 
                         if (index === 0) {
-                            return <HeaderNews key={index} new={element} />
+                            return <HeaderNews category={this.props.category} key={index} new={element} />
                         } else {
-                            return <CardNew key={index} new={element} />
+                            return <CardNew category={this.props.category} key={index} new={element} />
                         }
 
                     })}
