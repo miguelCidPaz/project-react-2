@@ -74,7 +74,7 @@ export const dataBase = {
     selectionBar: {
         class: 'selectionBar',
         nav: {
-            tittle: 'Xataka Selección',
+            title: 'Xataka Selección',
             fields: {
                 line1: 'LOS MEJORES',
                 line2: 'GUÍAS DE COMPRAS',
@@ -83,36 +83,13 @@ export const dataBase = {
                 line5: 'LOS EXPERTOS RESPONDEN'
             },
             foot: 'MÁS XATAKA SELECCIÓN'
-        },
-
-        items: {
-            item1: {
-                img: 'https://i.blogs.es/39fae3/samsung-galaxy-buds2/500_333.jpg',
-                text: 'Los últimos auriculares Bluetooth de Samsung con cancelación de ruido están rebajadísimos a 80 euros, su mínimo histórico',
-                alt: 'foto1'
-            },
-            item2: {
-                img: 'https://i.blogs.es/b04200/switch/500_333.jpg',
-                text: 'Compra la nueva Nintendo Switch OLED en Amazon y recíbela a tiempo para Navidad',
-                alt: 'foto2'
-            },
-            item3: {
-                img: 'https://i.blogs.es/83deb6/echo/500_333.jpeg',
-                text: 'Chollo antes de Navidad: compra el altavoz Echo más vendido por menos de 20 euros y llévate medio año del "Spotify" de Amazon gratis',
-                alt: 'foto3'
-            },
-            item4: {
-                img: 'https://i.blogs.es/3867fb/pexels-rodnae-productions-8735935/500_333.jpg',
-                text: '49 regalos tecnológicos para el amigo invisible y Navidad por menos de 15 euros que son útiles y merecen la pena',
-                alt: 'foto4'
-            },
         }
     },
 
     basicBar: {
         class: 'basicBar',
         nav: {
-            tittle: 'Xataka Basics',
+            title: 'Xataka Basics',
             fields: {
                 line1: 'WHATSAPP',
                 line2: 'INSTAGRAM',
@@ -121,30 +98,9 @@ export const dataBase = {
                 line5: 'A FONDO'
             },
             foot: 'MÁS XATAKA BASICS'
-        },
-        items: {
-            item1: {
-                img: 'https://i.blogs.es/dd4c8b/telefono-mayores/500_333.jpg',
-                text: 'Cómo configurar el móvil para personas mayores',
-                alt: 'foto1'
-            },
-            item2: {
-                img: 'https://i.blogs.es/6f723f/windows/500_333.jpg',
-                text: 'Mejores gestos y atajos de teclado para Windows 11',
-                alt: 'foto2'
-            },
-            item3: {
-                img: 'https://i.blogs.es/f71761/regalo/500_333.jpg',
-                text: 'Cómo hacer el amigo invisible a distancia: 14 aplicaciones, servicios y métodos',
-                alt: 'foto3'
-            },
-            item4: {
-                img: 'https://i.blogs.es/25287b/bizum-app/500_333.jpg',
-                text: 'Cómo probar la aplicación de Bizum en tu móvil Android y qué puedes hacer su versión de pruebas',
-                alt: 'foto4'
-            },
         }
     },
+
     footer: {
         class: 'footer',
         tittle: 'webedia.',
