@@ -44,6 +44,8 @@ class ListNews extends Component {
 
     render() {
         const arr = Object.values(this.state.items);
+        const selection = 'selectionBar';
+        const basic = 'basicBar';
         let count = 0; let barCount = 0;
         return (
             <div className="main-list">
@@ -66,9 +68,9 @@ class ListNews extends Component {
                         }
 
                         if (barCount === 4) {
-                            return <div className="space" key={index + "bar"}><Bar data={this.props.selectionBar} /> </div>
+                            return <div className="space" key={index + "bar"}><Bar controls={this.props.selectionBar} news={this.props.news} clase={selection} /> </div>
                         } else if (barCount === 13) {
-                            return <div className="space" key={index + "bar"}> <Bar data={this.props.basicBar} /> </div>
+                            return <div className="space" key={index + "bar"}> <Bar controls={this.props.basicBar} news={this.props.news} clase={basic} /> </div>
                         }
 
                         if (index === 0) {

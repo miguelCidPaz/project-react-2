@@ -4,12 +4,16 @@ import './style.css';
 
 class Aside extends React.Component {
     render() {
-        let aside = this.props.data;
+        let aside = Object.values(this.props.data);
         return (
             <div className="aside-content">
                 <div className="aside-list">
                     {aside.map((element, index) => {
-                        return <AsideItem element={element} key={index} />
+                        if (index < 5) {
+                            return <AsideItem element={element} key={index} />
+                        } else {
+                            return null
+                        }
                     })}
                 </div>
             </div>

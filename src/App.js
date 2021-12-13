@@ -2,7 +2,6 @@ import { Component } from 'react';
 import ListNews from './components/main-news/ListNews'
 import NavBar from './components/navbar/NavBar';
 import { dataBase } from './Data';
-import { data } from './components/aside/assets/asideItems';
 import Aside from './components/aside/Aside';
 import Banner from './components/banner/Banner';
 import Header from './components/header/Header';
@@ -107,10 +106,10 @@ class App extends Component {
             <div className="main-content-column">
                 <Header mainButtons={dataBase.mainButtons} navHead={dataBase.navHeader} socialButtons={dataBase.socialButtons} iconsTop={dataBase.iconsTop} />
                 <Banner ad={dataBase.banners} />
-                <NavBar changeCategory={this.changeCategory} partners={dataBase.partners} news={dataBase.fastNews} trends={dataBase.trending} />
+                <NavBar changeCategory={this.changeCategory} partners={dataBase.partners} news={this.state.news} trends={dataBase.trending} />
                 <div className="main-content">
                     <ListNews category={this.state.userCategory} news={this.state.news} ad={dataBase.banners} selectionBar={dataBase.selectionBar} basicBar={dataBase.basicBar} />
-                    <Aside data={data} />
+                    <Aside data={this.state.news} />
                 </div>
 
                 <Videos data={dataBase.videosBar} />
