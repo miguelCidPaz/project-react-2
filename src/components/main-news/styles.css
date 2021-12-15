@@ -211,7 +211,7 @@
     overflow: hidden;
     border-radius: 10px;
     margin: 20px;
-    animation: aparition 2.5s ease;
+    animation: aparition 3.5s ease;
 }
 
 .card-img-header img{
@@ -227,7 +227,7 @@
     margin: 20px;
     margin-top: 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    animation: aparition 2.5s ease;
+    animation: aparition 3.5s ease;
 }
 
 .description-card-text-header{
