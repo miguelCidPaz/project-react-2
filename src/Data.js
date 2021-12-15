@@ -64,11 +64,11 @@ export const dataBase = {
     navHeader: ["Empresa", "Entretenimiento", "Salud", "Ciencia", "Deportes", "Tecnologia"],
 
     socialButtons: {
-        0: { type: "social-icon", text: "a" },
-        1: { type: "social-icon", text: "b" },
-        2: { type: "social-icon", text: "c" },
-        3: { type: "social-icon", text: "d" },
-        4: { type: "social-icon", text: "e" },
+        0: { type: "social-icon", text: "A" },
+        1: { type: "social-icon", text: "B" },
+        2: { type: "social-icon", text: "C" },
+        3: { type: "social-icon", text: "D" },
+        4: { type: "social-icon", text: "E" },
     },
 
     selectionBar: {
