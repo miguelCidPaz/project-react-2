@@ -20,7 +20,7 @@ class Header extends Component {
                     <div className="container-nav-head">
                         <ButtonMain buttonType={this.props.socialButtons[1]} />
                         {this.props.navHead.map((element, index) => {
-                            return <NavHead key={index} text={element} />
+                            return <NavHead id={index} changeCategory={this.props.changeCategory} key={index} text={element} />
                         })}
                     </div>
                     <div className="container-social-buttons">

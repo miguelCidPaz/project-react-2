@@ -17,7 +17,7 @@ export const dataBase = {
         2: { img: "https://i.blogs.es/a0e620/microsd-blur/500_333.jpg", text: "Pon un pajarillo en tu vida", mark: "Petirrojo", action: "Ad ficticio" }
     },
 
-    trending: ["Empresa", "Entretenimiento", "General", "Salud", "Ciencia", "Deportes", "Tecnologia"],
+    trending: ["Empresa", "Entretenimiento", "Salud", "Ciencia", "Deportes", "Tecnologia"],
 
     iconsTop: {
         item0: {

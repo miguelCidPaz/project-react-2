@@ -53,33 +53,26 @@ class App extends Component {
 
             case 2:
                 this.setState(() => ({
-                    category: "general",
-                    userCategory: "General"
-                }))
-                break;
-
-            case 3:
-                this.setState(() => ({
                     category: "health",
                     userCategory: "Salud"
                 }))
                 break;
 
-            case 4:
+            case 3:
                 this.setState(() => ({
                     category: "science",
                     userCategory: "Ciencia"
                 }))
                 break;
 
-            case 5:
+            case 4:
                 this.setState(() => ({
                     category: "sports",
                     userCategory: "Deportes"
                 }))
                 break;
 
-            case 6:
+            case 5:
                 this.setState(() => ({
                     category: "technology",
                     userCategory: "Tecnologia"
@@ -104,7 +97,7 @@ class App extends Component {
     render() {
         return (
             <div className="main-content-column">
-                <Header mainButtons={dataBase.mainButtons} navHead={dataBase.navHeader} socialButtons={dataBase.socialButtons} iconsTop={dataBase.iconsTop} />
+                <Header changeCategory={this.changeCategory} mainButtons={dataBase.mainButtons} navHead={dataBase.navHeader} socialButtons={dataBase.socialButtons} iconsTop={dataBase.iconsTop} />
                 <Banner ad={dataBase.banners} />
                 <NavBar changeCategory={this.changeCategory} partners={dataBase.partners} news={this.state.news} trends={dataBase.trending} />
                 <div className="main-content">
