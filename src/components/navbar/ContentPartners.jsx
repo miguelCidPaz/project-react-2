@@ -2,6 +2,7 @@ import { Component } from 'react';
 import './style.css';
 
 class ContentPartners extends Component {
+
     render() {
         const arr = Object.values(this.props.partners)
         return (
@@ -12,7 +13,7 @@ class ContentPartners extends Component {
                     </div>
                     {arr.map((element, index) => {
                         return <div key={index} className={`link-partner ${element.color}`}>
-                            <p>{element.partner}</p>
+                            <li value={index} onClick={e => this.props.changeNews(e.target.value)}>{element.partner}</li>
                         </div>
                     })}
                 </nav>

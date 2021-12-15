@@ -3,7 +3,7 @@ import { Component } from "react";
 class NavHead extends Component {
     render() {
         return (
-            <p className="nav-head-link">{this.props.text}</p>
+            <li onClick={e => this.props.changeCategory(e.target.value)} value={this.props.id} className="nav-head-link">{this.props.text}</li>
         )
     }
 }

@@ -1,14 +1,14 @@
 export const dataBase = {
 
     partners: {
-        Item1: { partner: "Innovacion LG", color: "partner-one" },
-        Item2: { partner: "realme Tech Life", color: "partner-two" },
-        Item3: { partner: "Innovacion Volvo", color: "partner-three" },
-        Item4: { partner: "Planeta Fantasy", color: "partner-four" },
-        Item5: { partner: "e-Citroen", color: "partner-five" },
-        Item6: { partner: "e-Movilidad Opel", color: "partner-six" },
-        Item7: { partner: "e-Motion Peugeot", color: "partner-seven" },
-        Item8: { partner: "Tu Casa Roborock", color: "partner-eight" }
+        Item1: { partner: "Innovacion", color: "partner-one" },
+        Item2: { partner: "Futbol", color: "partner-two" },
+        Item3: { partner: "e-Sports", color: "partner-three" },
+        Item4: { partner: "Planeta", color: "partner-four" },
+        Item5: { partner: "Juegos", color: "partner-five" },
+        Item6: { partner: "Coches", color: "partner-six" },
+        Item7: { partner: "Bitcoin", color: "partner-seven" },
+        Item8: { partner: "Libros", color: "partner-eight" }
     },
 
     banners: {
@@ -17,7 +17,7 @@ export const dataBase = {
         2: { img: "https://i.blogs.es/a0e620/microsd-blur/500_333.jpg", text: "Pon un pajarillo en tu vida", mark: "Petirrojo", action: "Ad ficticio" }
     },
 
-    trending: ["Empresa", "Entretenimiento", "General", "Salud", "Ciencia", "Deportes", "Tecnologia"],
+    trending: ["Empresa", "Entretenimiento", "Salud", "Ciencia", "Deportes", "Tecnologia"],
 
     iconsTop: {
         item0: {
@@ -61,14 +61,14 @@ export const dataBase = {
         }
     },
 
-    navHeader: ["Analisis", "Xataka Seleccion", "Moviles", "Ciencia", "Newsletter", "Regalos de navidad"],
+    navHeader: ["Empresa", "Entretenimiento", "Salud", "Ciencia", "Deportes", "Tecnologia"],
 
     socialButtons: {
-        0: { type: "social-icon", text: "a" },
-        1: { type: "social-icon", text: "b" },
-        2: { type: "social-icon", text: "c" },
-        3: { type: "social-icon", text: "d" },
-        4: { type: "social-icon", text: "e" },
+        0: { type: "social-icon", text: "A" },
+        1: { type: "social-icon", text: "B" },
+        2: { type: "social-icon", text: "C" },
+        3: { type: "social-icon", text: "D" },
+        4: { type: "social-icon", text: "E" },
     },
 
     selectionBar: {

@@ -12,7 +12,7 @@ class NavBarNews extends Component {
                     {arr.map((element, index) => {
                         if (index < 3) {
                             return <div key={index} className={`fastnew-frame ${clases[index]}`}>
-                                <img className="img-new" src={element.urlToImage} alt="#" />
+                                <a href={element.url} target="_blank" rel="noreferrer"><img className="img-new" src={element.urlToImage} alt="#" /></a>
                                 <p>{element.title}</p>
                             </div>
                         } else {
