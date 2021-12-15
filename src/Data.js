@@ -2,12 +2,12 @@ export const dataBase = {
 
     partners: {
         Item1: { partner: "Innovacion", color: "partner-one" },
-        Item2: { partner: "Tech Life", color: "partner-two" },
-        Item3: { partner: "Innovacion", color: "partner-three" },
+        Item2: { partner: "Futbol", color: "partner-two" },
+        Item3: { partner: "e-Sports", color: "partner-three" },
         Item4: { partner: "Planeta", color: "partner-four" },
         Item5: { partner: "Juegos", color: "partner-five" },
         Item6: { partner: "Coches", color: "partner-six" },
-        Item7: { partner: "Consolas", color: "partner-seven" },
+        Item7: { partner: "Bitcoin", color: "partner-seven" },
         Item8: { partner: "Libros", color: "partner-eight" }
     },
 
@@ -61,7 +61,7 @@ export const dataBase = {
         }
     },
 
-    navHeader: ["Analisis", "Xataka Seleccion", "Moviles", "Ciencia", "Newsletter", "Regalos de navidad"],
+    navHeader: ["Empresa", "Entretenimiento", "Salud", "Ciencia", "Deportes", "Tecnologia"],
 
     socialButtons: {
         0: { type: "social-icon", text: "a" },
