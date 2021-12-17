@@ -10,6 +10,9 @@ import Videos from './components/videosBar/Videos';
 import axios from 'axios';
 import { APIKEY } from './key';
 
+/**
+ * Parte central para visualizar cada componente
+ */
 class App extends Component {
     constructor(props) {
         super(props);
@@ -24,9 +27,13 @@ class App extends Component {
         this.changeCategory = this.changeCategory.bind(this)
     }
 
-    async componentDidMount() {
+    /**
+     * Montaje asincrono del data central
+     */
+    componentDidMount() {
         this.fetchMoreData()
     }
+
 
     async fetchMoreData() {
         const resp = await axios.get(`https://newsapi.org/v2/top-headlines?category=${this.state.category}&apiKey=` + APIKEY)
@@ -35,6 +42,12 @@ class App extends Component {
             newsSelection: { ...resp.data.articles }
         }))
     }
+
+    /**
+     * Esta funcion realizara una llamada para devolver a las middlebars las noticias solicitadas usando el parametro q de la api
+     * 
+     * @param {*} category String a buscar en la Api
+     */
     async fetchOtherSelection(category) {
         const resp = await axios.get(`https://newsapi.org/v2/everything?q=${category}&apiKey=` + APIKEY)
         this.setState((prevState) => ({
@@ -42,6 +55,11 @@ class App extends Component {
         }))
     }
 
+    /**
+     * Mediante un switch decidiremos que categorias usar en la busqueda de las noticias centrales
+     * 
+     * @param {*} value valor entero recibido
+     */
     changeCategory(value) {
 
         switch (value) {
@@ -97,6 +115,13 @@ class App extends Component {
 
     }
 
+    /**
+     * De esta forma le decimos al componente que cuando el estado cambia debe realizar la busqueda, asi evitamos
+     * problemas de sincronia
+     * 
+     * @param {*} prevProps 
+     * @param {*} prevState 
+     */
     componentDidUpdate(prevProps, prevState) {
         if (this.state.category !== prevState.category) {
             this.fetchMoreData();
@@ -114,7 +139,7 @@ class App extends Component {
                     <Aside data={this.state.news} />
                 </div>
 
-                {<Videos data={dataBase.videosBar} /> }
+                {<Videos data={dataBase.videosBar} />}
                 <Footer data={dataBase.footer} />
             </div>
         )
