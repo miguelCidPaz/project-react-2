@@ -84,6 +84,12 @@ img {
 .videoHidden {
     display: none;
 }
+.videos-box-individual-video {
+    height: 8rem;
+}
+.videos-box-individual-video iframe {
+    height: 100%;
+}
 @media only screen and (min-width: 1200px) {
     .videos-box {
         height: 24rem;

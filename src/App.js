@@ -16,11 +16,13 @@ class App extends Component {
         this.state = {
             news: [],
             newsSelection: [1],
+            newsBasics: [1],
             category: "technology",
             userCategory: "Tecnologia"
         }
         this.fetchMoreData = this.fetchMoreData.bind(this)
         this.fetchOtherSelection = this.fetchOtherSelection.bind(this)
+        this.fetchOtherBasics = this.fetchOtherBasics.bind(this)
         this.changeCategory = this.changeCategory.bind(this)
     }
 
@@ -32,13 +34,20 @@ class App extends Component {
         const resp = await axios.get(`https://newsapi.org/v2/top-headlines?category=${this.state.category}&apiKey=` + APIKEY)
         this.setState((prevState) => ({
             news: { ...resp.data.articles },
-            newsSelection: { ...resp.data.articles }
+            newsSelection: { ...resp.data.articles },
+            newsBasics: { ...resp.data.articles }
         }))
     }
     async fetchOtherSelection(category) {
         const resp = await axios.get(`https://newsapi.org/v2/everything?q=${category}&apiKey=` + APIKEY)
         this.setState((prevState) => ({
             newsSelection: { ...resp.data.articles }
+        }))
+    }
+    async fetchOtherBasics(category) {
+        const resp = await axios.get(`https://newsapi.org/v2/everything?q=${category}&apiKey=` + APIKEY)
+        this.setState((prevState) => ({
+            newsBasics: { ...resp.data.articles }
         }))
     }
 
@@ -110,7 +119,7 @@ class App extends Component {
                 <Banner ad={dataBase.banners} />
                 <NavBar changeCategory={this.changeCategory} partners={dataBase.partners} news={this.state.news} trends={dataBase.trending} />
                 <div className="main-content">
-                    <ListNews category={this.state.userCategory} news={this.state.news} ad={dataBase.banners} changeSelection={this.fetchOtherSelection} newsSelection={this.state.newsSelection} selectionBar={dataBase.selectionBar} basicBar={dataBase.basicBar} />
+                    <ListNews category={this.state.userCategory} news={this.state.news} ad={dataBase.banners} changeSelection={this.fetchOtherSelection} changeBasics={this.fetchOtherBasics} newsSelection={this.state.newsSelection} newsBasics={this.state.newsBasics} selectionBar={dataBase.selectionBar} basicBar={dataBase.basicBar} />
                     <Aside data={this.state.news} />
                 </div>
 
