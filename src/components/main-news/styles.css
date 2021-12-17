@@ -293,13 +293,15 @@
 .close-chat{
     position: relative;
     border-radius: 100%;
-    background-color: rgb(224, 50, 50);
-    box-shadow: 0 0 15px inset red, 0 0 5px rgb(224, 50, 50);
+    background-color: #72DA38;
+    box-shadow: 0 0 15px inset #95f761, 0 0 5px #72DA38;
     outline: none;
+    border: none;
+    transition-duration: 0.2s;
     font-size: 20px;
     font-weight: bolder;
     cursor: pointer;
-    width: 40px;
+    width: 35px;
     height: 40px;
     color: white;
     top: 1.5%;
@@ -307,7 +309,7 @@
 }
 
 .close-chat:hover{
-    box-shadow: 0 0 15px inset red, 0 0 15px rgb(224, 50, 50);
+    box-shadow:0 0 15px inset #95f761, 0 0 15px #72DA38;
 }
 
 .chat{
@@ -326,6 +328,7 @@
 .content-comment{
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin-left: auto;
     margin-right: auto;
     background-color: white;
@@ -350,9 +353,20 @@
 
 .delete-comment{
     border-radius: 0px 20px 20px 0px;
+    background-color: #72DA38;
+    box-shadow: 0 0 10px inset #95f761, 0 0 5px #72DA38;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition-duration: 0.2s;
     font-size: 20px;
     width: 9%;
     height: 100%;
+}
+
+.delete-comment:hover{
+    box-shadow: 0 0 10px inset #95f761, 0 0 10px #72DA38;
 }
 
 .comment{
@@ -380,12 +394,13 @@
 }
 
 .controls-chat .error-input{
-    box-shadow: 0 0 10px red;
+    box-shadow: 0 0 5px red;
 }
 
 .controls-chat button{
-    background-color: rgb(224, 50, 50);
-    box-shadow: 0 0 15px inset red, 0 0 5px rgb(224, 50, 50);
+    background-color: #72DA38;
+    box-shadow: 0 0 15px inset #95f761, 0 0 5px #72DA38;
+    transition-duration: 0.2s;
     padding-bottom: 30px;
     color: white;
     width: 30%;
@@ -401,7 +416,7 @@
 }
 
 .controls-chat button:hover{
-    box-shadow: 0 0 15px inset red, 0 0 15px rgb(224, 50, 50);
+    box-shadow: 0 0 15px inset #95f761, 0 0 15px #72DA38;
 }
 
 @media (max-width:900px){
