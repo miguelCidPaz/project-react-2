@@ -4,7 +4,7 @@ import ButtonMain from "./ButtonMain";
 import MainLogo from "./MainLogo";
 
 /**
- * Esta clase recogera 3 componentes, 2 buttonsmain y el mainLogo de Xataka
+ * This class will collect 3 components, 2 buttonsmain and the mainLogo of Engadget
  */
 class HeaderMain extends Component {
     render() {
