@@ -2,10 +2,9 @@ import { Component } from 'react';
 import './style.css'
 
 /**
- * Etiqueta sustituta de googleAds, mediante una pequeña
- * randomizacion vamos cambiando su contenido
+ * Substitute label for googleAds, through a small randomization we are changing its content
  * 
- * Recibira una prop llamada ad que contendra todos los elementos
+ * You will receive a prop called ad that will contain all the elements
  */
 class Banner extends Component {
     constructor(props) {
@@ -19,8 +18,8 @@ class Banner extends Component {
     }
 
     /**
-     * Cerrara el ad en cuestion, no podra recuperarse en esa posicion
-     * a no ser que se recargue la pagina
+     * It will close the ad in question, it will not be able to 
+     * recover in that position unless the page is reloaded
      */
     closeAd() {
         this.setState(({
@@ -29,7 +28,7 @@ class Banner extends Component {
     }
 
     /**
-     * Pequeña randomizacion del contenido de los ads
+     * Small randomization of the content of the ads
      * 
      * @returns Object ads
      */
