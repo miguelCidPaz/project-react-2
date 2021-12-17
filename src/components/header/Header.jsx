@@ -7,7 +7,10 @@ import './style.css'
 /**
  * Componente central que contendra el resto de componentes que formaran el header
  * 
+ * Recibira las props de socialButtons e iconsTop que corresponderian a los iconos y botones,
+ * ademas de los correspondientes textos. 
  * 
+ * Servira tambien para pasar la funcion de changeCategory a su hijos NavHead (El menu superior)
  */
 class Header extends Component {
     render() {
