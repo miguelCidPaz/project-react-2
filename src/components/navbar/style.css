@@ -169,7 +169,7 @@
 .first-new::before, .second-new::before, .three-new::before{
     content: '';
     position: absolute;
-    top: 56%;
+    top: 39%;
     left: 15.7%;
     right: 0;
     bottom: 0;
@@ -262,7 +262,7 @@
     }
 
     .first-new::before, .second-new::before, .three-new::before{
-        top: 60%;
+        top: 42.5%;
         width: 31%;
         height: 200px;
     }
@@ -324,6 +324,6 @@
 
 @media (max-height:700px){
     .first-new::before, .second-new::before, .three-new::before{
-        top: 75%;
+        top: 45%;
     }
 }
