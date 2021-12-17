@@ -11,7 +11,7 @@ import axios from 'axios';
 import { APIKEY } from './key';
 
 /**
- * Parte central para visualizar cada componente
+ * Central part to visualize each component
  */
 class App extends Component {
     constructor(props) {
@@ -28,7 +28,7 @@ class App extends Component {
     }
 
     /**
-     * Montaje asincrono del data central
+     * Asynchronous mounting of the central data
      */
     componentDidMount() {
         this.fetchMoreData()
@@ -44,9 +44,9 @@ class App extends Component {
     }
 
     /**
-     * Esta funcion realizara una llamada para devolver a las middlebars las noticias solicitadas usando el parametro q de la api
+     * This function will make a call to return the requested news to the middlebars using the q parameter of the api
      * 
-     * @param {*} category String a buscar en la Api
+     * @param {String} category
      */
     async fetchOtherSelection(category) {
         const resp = await axios.get(`https://newsapi.org/v2/everything?q=${category}&apiKey=` + APIKEY)
@@ -56,9 +56,9 @@ class App extends Component {
     }
 
     /**
-     * Mediante un switch decidiremos que categorias usar en la busqueda de las noticias centrales
+     * Through a switch we will decide which categories to use in the search for the central news
      * 
-     * @param {*} value valor entero recibido
+     * @param {Number} value
      */
     changeCategory(value) {
 
@@ -116,11 +116,11 @@ class App extends Component {
     }
 
     /**
-     * De esta forma le decimos al componente que cuando el estado cambia debe realizar la busqueda, asi evitamos
-     * problemas de sincronia
+     * In this way we tell the component that when the state changes it must perform the search, 
+     * thus avoiding synchronization problems
      * 
-     * @param {*} prevProps 
-     * @param {*} prevState 
+     * @param {Object} prevProps 
+     * @param {Object} prevState 
      */
     componentDidUpdate(prevProps, prevState) {
         if (this.state.category !== prevState.category) {
