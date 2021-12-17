@@ -3,7 +3,13 @@ import NewsChat from './NewsChat'
 import './styles.css'
 
 /**
+ * Cardnew recibira un Object que contendra todos los datos de una determinada noticia,
+ * Los trateremos para dar forma a las tarjetas de noticia y agregaremos unos pequeños controles.
  * 
+ * Esta etiqueta podra tanto minimizarse como devolverse a su tamaño original
+ * 
+ * Ademas podra desplegar otra ventana donde tendremos acceso a un chat que guardaremos individualmente
+ * por cada noticia.
  */
 class CardNew extends Component {
     constructor(props) {
@@ -18,6 +24,12 @@ class CardNew extends Component {
         this.saveDataChat = this.saveDataChat.bind(this);
     }
 
+    /**
+     * Recibiremos el estado del chat y lo guardaremos en saveChat en forma
+     * de array de objetos.
+     * 
+     * @param {Object} dataChat 
+     */
     saveDataChat(dataChat) {
         console.log(dataChat)
         this.setState(() => ({
@@ -25,12 +37,18 @@ class CardNew extends Component {
         }))
     }
 
+    /**
+     * Controlara el estado de visibilidad del chat
+     */
     openChat() {
         this.setState(() => ({
             visualChat: !this.state.visualChat
         }))
     }
 
+    /**
+     * Controlara si la cardnew se encuentra o no minimizada
+     */
     minimize() {
         const min = this.state.minimize
         this.setState(() => ({
