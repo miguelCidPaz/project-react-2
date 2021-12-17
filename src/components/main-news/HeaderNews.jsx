@@ -1,12 +1,29 @@
 import { Component } from "react";
+import NewsChat from "./NewsChat";
 
 class HeaderNews extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            minimize: false
+            minimize: false,
+            visualChat: false,
+            saveChat: []
         }
-        this.minimize = this.minimize.bind(this)
+        this.minimize = this.minimize.bind(this);
+        this.openChat = this.openChat.bind(this);
+        this.saveDataChat = this.saveDataChat.bind(this);
+    }
+
+    saveDataChat(dataChat) {
+        this.setState(() => ({
+            saveChat: Object.values(dataChat)
+        }))
+    }
+
+    openChat() {
+        this.setState(() => ({
+            visualChat: !this.state.visualChat
+        }))
     }
 
     minimize() {
@@ -21,6 +38,7 @@ class HeaderNews extends Component {
         return (
             <>
                 <div className="last-new-label"><p>Lo ultimo</p></div>
+                {this.state.visualChat ? <NewsChat saveChat={this.saveDataChat} openChat={this.openChat} notice={this.props.new.title} content={this.state.saveChat} /> : null}
                 <div className={this.state.minimize ? "body-card-minimize" : "body-card-header"}>
                     <div onClick={this.minimize} className="control"><p>{this.state.minimize ? "+" : "-"}</p></div>
                     {this.state.minimize ? <p className="pseudo-description">{this.props.new.title}</p> : <><div className="card-img-header">
@@ -29,7 +47,7 @@ class HeaderNews extends Component {
                             <p className="description-card-text-header">{this.props.new.title}</p>
                             <p className="categoria-card-text-header">{this.props.category}</p>
                             <p className="cuerpo-card-text-header">{this.props.new.description}<button className="read-more">Leer Mas &gt;&gt;</button></p>
-                            <p className="footer-card-text-header"><button className="comments-card-text">💬</button>{this.props.new.footer}</p>
+                            <p className="footer-card-text-header"><button onClick={this.openChat} className="comments-card-text">💬</button>{this.props.new.footer}{this.state.saveChat.length}</p>
                         </div></>}
 
                 </div>
