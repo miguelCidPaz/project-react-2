@@ -3,7 +3,6 @@ import ListNews from './components/main-news/ListNews'
 import NavBar from './components/navbar/NavBar';
 import { dataBase } from './Data';
 import Aside from './components/aside/Aside';
-import Banner from './components/banner/Banner';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import Videos from './components/videosBar/Videos';
