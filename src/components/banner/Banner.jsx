@@ -1,24 +1,36 @@
 import { Component } from 'react';
 import './style.css'
 
+/**
+ * Etiqueta sustituta de googleAds, mediante una pequeña
+ * randomizacion vamos cambiando su contenido
+ */
 class Banner extends Component {
     constructor(props) {
         super(props);
         this.state = {
             ad: { ...this.props.ad },
-            /*  visible: true */
+            visible: true
         }
-        console.disableYellowBox = true;
         this.adRandom = this.adRandom.bind(this);
-        /* this.closeAd = this.closeAd.bind(this); */
+        this.closeAd = this.closeAd.bind(this);
     }
 
-    /*     closeAd() {
-            this.setState(({
-                visible: !this.state.visible
-            }))
-        } */
+    /**
+     * Cerrara el ad en cuestion, no podra recuperarse en esa posicion
+     * a no ser que se recargue la pagina
+     */
+    closeAd() {
+        this.setState(({
+            visible: !this.state.visible
+        }))
+    }
 
+    /**
+     * Pequeña randomizacion del contenido de los ads
+     * 
+     * @returns Object ads
+     */
     adRandom() {
         const ads = Object.values({ ...this.state.ad })
         const select = Math.floor(Math.random() * ads.length)
@@ -28,7 +40,7 @@ class Banner extends Component {
 
     render() {
         const ad = this.adRandom()
-        return <div className="content-banner">
+        return <>{this.state.visible ? <div className="content-banner">
             <div className="banner-frame">
                 <img src={ad.img} alt="#" className="banner-img" />
             </div>
@@ -37,10 +49,10 @@ class Banner extends Component {
                 <p className="banner-trademark">{ad.mark}</p>
             </div>
             <div className="banner-action">
-                <div className="banner-exit">X</div>
+                <div onClick={this.closeAd} className="banner-exit">X</div>
                 <div className="banner-action-p">{ad.action}</div>
             </div>
-        </div>
+        </div> : null}</>
     }
 }
 
