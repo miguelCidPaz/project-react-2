@@ -1,6 +1,9 @@
 import { Component } from 'react';
 import './style.css';
 
+/**
+ * Component that will show the news brought from the search in the father
+ */
 class NavBarNews extends Component {
     render() {
         const arr = Object.values(this.props.news)

@@ -10,6 +10,9 @@ import Videos from './components/videosBar/Videos';
 import axios from 'axios';
 import { APIKEY } from './key';
 
+/**
+ * Central part to visualize each component
+ */
 class App extends Component {
     constructor(props) {
         super(props);
@@ -24,9 +27,13 @@ class App extends Component {
         this.changeCategory = this.changeCategory.bind(this)
     }
 
-    async componentDidMount() {
+    /**
+     * Asynchronous mounting of the central data
+     */
+    componentDidMount() {
         this.fetchMoreData()
     }
+
 
     async fetchMoreData() {
         const resp = await axios.get(`https://newsapi.org/v2/top-headlines?category=${this.state.category}&apiKey=` + APIKEY)
@@ -35,6 +42,12 @@ class App extends Component {
             newsSelection: { ...resp.data.articles }
         }))
     }
+
+    /**
+     * This function will make a call to return the requested news to the middlebars using the q parameter of the api
+     * 
+     * @param {String} category
+     */
     async fetchOtherSelection(category) {
         const resp = await axios.get(`https://newsapi.org/v2/everything?q=${category}&apiKey=` + APIKEY)
         this.setState((prevState) => ({
@@ -42,6 +55,11 @@ class App extends Component {
         }))
     }
 
+    /**
+     * Through a switch we will decide which categories to use in the search for the central news
+     * 
+     * @param {Number} value
+     */
     changeCategory(value) {
 
         switch (value) {
@@ -97,6 +115,13 @@ class App extends Component {
 
     }
 
+    /**
+     * In this way we tell the component that when the state changes it must perform the search, 
+     * thus avoiding synchronization problems
+     * 
+     * @param {Object} prevProps 
+     * @param {Object} prevState 
+     */
     componentDidUpdate(prevProps, prevState) {
         if (this.state.category !== prevState.category) {
             this.fetchMoreData();
@@ -114,7 +139,7 @@ class App extends Component {
                     <Aside data={this.state.news} />
                 </div>
 
-                {<Videos data={dataBase.videosBar} /> }
+                {<Videos data={dataBase.videosBar} />}
                 <Footer data={dataBase.footer} />
             </div>
         )

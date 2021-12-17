@@ -6,6 +6,9 @@ import './styles.css';
 import Banner from "../banner/Banner";
 import Bar from '../midde-bars/Bar'
 
+/**
+ * This component will contain all the news that the call to the api will bring from the App component
+ */
 class ListNews extends Component {
     constructor(props) {
         super(props);
@@ -16,6 +19,10 @@ class ListNews extends Component {
         this.fetchMoreData = this.fetchMoreData.bind(this)
     }
 
+    /**
+     * This function will refresh the items and length states, with length we control the length of the arr, 
+     * items will be the object that contains the news
+     */
     fetchMoreData() {
         let dataActual = Object.values(this.state.items)
         let datafresh = Object.values(this.props.news);
@@ -27,13 +34,13 @@ class ListNews extends Component {
         }))
     }
 
-    async componentDidMount() {
+    componentDidMount() {
         this.setState(() => ({
             items: { ...this.props.news }
         }))
     }
 
-    async componentDidUpdate(prevProps) {
+    componentDidUpdate(prevProps) {
         if (this.props.news !== prevProps.news) {
             this.setState(() => ({
                 items: { ...this.props.news },
@@ -42,6 +49,9 @@ class ListNews extends Component {
         }
     }
 
+    /**
+     * This render will also contain the midBar and the add to get them to integrate with the list
+     */
     render() {
         const arr = Object.values(this.state.items);
         const selection = 'selectionBar';

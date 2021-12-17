@@ -1,6 +1,9 @@
 import { Component } from "react";
 import '../style.css';
 
+/**
+ * Only contains the logo
+ */
 class MainLogo extends Component {
     render() {
         return (

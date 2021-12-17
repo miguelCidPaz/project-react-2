@@ -1,6 +1,10 @@
 import { Component } from 'react';
 import './style.css';
 
+/**
+ * Label that contains the animated menu that will control the central news of the navbar
+ * It will receive the function from the parent component and it will return the value assigned to the label
+ */
 class ContentPartners extends Component {
 
     render() {

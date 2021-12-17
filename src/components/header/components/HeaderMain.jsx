@@ -3,6 +3,9 @@ import '../style.css';
 import ButtonMain from "./ButtonMain";
 import MainLogo from "./MainLogo";
 
+/**
+ * This class will collect 3 components, 2 buttonsmain and the mainLogo of Engadget
+ */
 class HeaderMain extends Component {
     render() {
         const buttons = Object.values({ ...this.props.mainButtons });

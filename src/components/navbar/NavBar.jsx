@@ -5,6 +5,9 @@ import NavBarTrends from "./NavBarTrends";
 import { APIKEY } from '../../key'
 import axios from 'axios'
 
+/**
+ * Central component of navbar that will manage the displayed news, raising the value of one component and sending props to the next
+ */
 class NavBar extends Component {
     constructor(props) {
         super(props);
@@ -26,6 +29,9 @@ class NavBar extends Component {
         }
     }
 
+    /**
+     * Calling the api using the q parameter to search for matches
+     */
     async fetchMoreData() {
         const resp = await axios.get(`https://newsapi.org/v2/everything?q=${this.state.search}&apiKey=` + APIKEY)
         this.setState((prevState) => ({
@@ -33,6 +39,11 @@ class NavBar extends Component {
         }))
     }
 
+    /**
+     * Decision tree to know what value we will assign to the state search
+     * 
+     * @param {Number} value 
+     */
     changeNews(value) {
         switch (value) {
             case 0:

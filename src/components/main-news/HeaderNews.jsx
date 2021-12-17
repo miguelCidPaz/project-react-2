@@ -1,6 +1,14 @@
 import { Component } from "react";
 import NewsChat from "./NewsChat";
 
+/**
+  * HeaderNews will have exactly the same functionalities as CardNew, but to avoid the JSX of
+  * The cards got even more muddy, it was decided for a small separation, but it could be optimized to avoid it
+  *
+  * Minimized control
+  *
+  * Chat window with memory according to the state of the father
+ */
 class HeaderNews extends Component {
     constructor(props) {
         super(props);
@@ -14,24 +22,37 @@ class HeaderNews extends Component {
         this.saveDataChat = this.saveDataChat.bind(this);
     }
 
+    /**
+     * We will receive the status of the chat and save it in saveChat as an array of objects.
+     * 
+     * @param {Object} dataChat 
+     */
     saveDataChat(dataChat) {
+        console.log(dataChat)
         this.setState(() => ({
             saveChat: Object.values(dataChat)
         }))
     }
 
+    /**
+     * Control the visibility status of the chat
+     */
     openChat() {
         this.setState(() => ({
             visualChat: !this.state.visualChat
         }))
     }
 
+    /**
+     * It will control if the cardnew is minimized or not
+     */
     minimize() {
         const min = this.state.minimize
         this.setState(() => ({
             minimize: !min
         }))
     }
+
 
     render() {
         const photoDefault = "https://image.shutterstock.com/image-illustration/male-default-avatar-profile-gray-260nw-582509281.jpg";
