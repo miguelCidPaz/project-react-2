@@ -132,7 +132,6 @@ class App extends Component {
         return (
             <div className="main-content-column">
                 <Header changeCategory={this.changeCategory} mainButtons={dataBase.mainButtons} navHead={dataBase.navHeader} socialButtons={dataBase.socialButtons} iconsTop={dataBase.iconsTop} />
-                <Banner ad={dataBase.banners} />
                 <NavBar changeCategory={this.changeCategory} partners={dataBase.partners} news={this.state.news} trends={dataBase.trending} />
                 <div className="main-content">
                     <ListNews category={this.state.userCategory} news={this.state.news} ad={dataBase.banners} changeSelection={this.fetchOtherSelection} newsSelection={this.state.newsSelection} selectionBar={dataBase.selectionBar} basicBar={dataBase.basicBar} />
