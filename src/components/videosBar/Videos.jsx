@@ -31,7 +31,7 @@ class Videos extends React.Component {
                 <div className="mainVideo">{this.props.data.videos.main}</div>
                 <div className="videos-box">
                     {videos.map((element,index) => {
-                    return <div className='videos-box-individual'key={index}><div className='videoDiv videoHidden'>{element.video}<p onClick={resize}>CERRAR(X)</p></div> <div><img src={element.img} onClick={resize} alt='video youtube'/></div><p>{element.text}</p></div>
+                    return <div className='videos-box-individual'key={index}><div className='videoDiv videoHidden'>{element.video}<p onMouseDown={resize}>CERRAR(X)</p></div> <div><img src={element.img} onMouseDown={resize} alt='video youtube'/></div><p>{element.text}</p></div>
                     })}  
                 </div>
             </div>

@@ -25,7 +25,7 @@
 }
 .asideItemBody {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background-color: #FFFFFF;
     padding: 1rem 3rem;
 }
@@ -277,6 +277,11 @@
 @media (max-width:900px){
     .space{
         height: 650px;
+    }
+}
+@media (max-width:1000px){
+    .main-content {
+        grid-template-columns: 1fr 180px;
     }
 }
 

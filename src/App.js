@@ -15,10 +15,12 @@ class App extends Component {
         super(props);
         this.state = {
             news: [],
+            newsSelection: [1],
             category: "technology",
             userCategory: "Tecnologia"
         }
         this.fetchMoreData = this.fetchMoreData.bind(this)
+        this.fetchOtherSelection = this.fetchOtherSelection.bind(this)
         this.changeCategory = this.changeCategory.bind(this)
     }
 
@@ -29,7 +31,14 @@ class App extends Component {
     async fetchMoreData() {
         const resp = await axios.get(`https://newsapi.org/v2/top-headlines?category=${this.state.category}&apiKey=` + APIKEY)
         this.setState((prevState) => ({
-            news: { ...resp.data.articles }
+            news: { ...resp.data.articles },
+            newsSelection: { ...resp.data.articles }
+        }))
+    }
+    async fetchOtherSelection(category) {
+        const resp = await axios.get(`https://newsapi.org/v2/everything?q=${category}&apiKey=` + APIKEY)
+        this.setState((prevState) => ({
+            newsSelection: { ...resp.data.articles }
         }))
     }
 
@@ -101,11 +110,11 @@ class App extends Component {
                 <Banner ad={dataBase.banners} />
                 <NavBar changeCategory={this.changeCategory} partners={dataBase.partners} news={this.state.news} trends={dataBase.trending} />
                 <div className="main-content">
-                    <ListNews category={this.state.userCategory} news={this.state.news} ad={dataBase.banners} selectionBar={dataBase.selectionBar} basicBar={dataBase.basicBar} />
+                    <ListNews category={this.state.userCategory} news={this.state.news} ad={dataBase.banners} changeSelection={this.fetchOtherSelection} newsSelection={this.state.newsSelection} selectionBar={dataBase.selectionBar} basicBar={dataBase.basicBar} />
                     <Aside data={this.state.news} />
                 </div>
 
-                <Videos data={dataBase.videosBar} />
+                {<Videos data={dataBase.videosBar} /> }
                 <Footer data={dataBase.footer} />
             </div>
         )

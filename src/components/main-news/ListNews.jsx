@@ -68,7 +68,7 @@ class ListNews extends Component {
                         }
 
                         if (barCount === 4) {
-                            return <div className="space" key={index + "bar"}><Bar controls={this.props.selectionBar} news={this.props.news} clase={selection} /> </div>
+                            return <div className="space" key={index + "bar"}><Bar changeSelection={this.props.changeSelection} controls={this.props.selectionBar} news={this.props.newsSelection} clase={selection} /> </div>
                         } else if (barCount === 13) {
                             return <div className="space" key={index + "bar"}> <Bar controls={this.props.basicBar} news={this.props.news} clase={basic} /> </div>
                         }
