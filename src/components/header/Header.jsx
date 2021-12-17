@@ -4,8 +4,14 @@ import HeaderMain from "./components/HeaderMain";
 import NavHead from './components/NavHead';
 import './style.css'
 
+/**
+ * Componente central que contendra el resto de componentes que formaran el header
+ * 
+ * 
+ */
 class Header extends Component {
     render() {
+        //Estas dos const son solo un tratamiento preliminar para esparcir la data
         const arr = Object.values(this.props.socialButtons);
         const arrIcons = Object.values(this.props.iconsTop);
         return (

@@ -4,6 +4,8 @@ import './style.css'
 /**
  * Etiqueta sustituta de googleAds, mediante una pequeña
  * randomizacion vamos cambiando su contenido
+ * 
+ * Recibira una prop llamada ad que contendra todos los elementos
  */
 class Banner extends Component {
     constructor(props) {
