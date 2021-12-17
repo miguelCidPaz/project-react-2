@@ -5,16 +5,11 @@ import NavHead from './components/NavHead';
 import './style.css'
 
 /**
- * Componente central que contendra el resto de componentes que formaran el header
- * 
- * Recibira las props de socialButtons e iconsTop que corresponderian a los iconos y botones,
- * ademas de los correspondientes textos. 
- * 
- * Servira tambien para pasar la funcion de changeCategory a su hijos NavHead (El menu superior)
+ * Central component that will contain the rest of the components that will make up the header
  */
 class Header extends Component {
     render() {
-        //Estas dos const son solo un tratamiento preliminar para esparcir la data
+        //These two const are only a preliminary treatment to spread the data
         const arr = Object.values(this.props.socialButtons);
         const arrIcons = Object.values(this.props.iconsTop);
         return (
