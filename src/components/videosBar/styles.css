@@ -83,6 +83,9 @@ img {
 .videoHidden {
     display: none;
 }
+.links p:hover {
+    cursor: pointer;
+}
 @media only screen and (min-width: 1200px) {
     .videos-box {
         height: 24rem;

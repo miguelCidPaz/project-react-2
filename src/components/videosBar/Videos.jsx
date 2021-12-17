@@ -7,7 +7,6 @@ class Videos extends React.Component {
         const videos = Object.values(this.props.data.videos.secondary);
         function resize(e){
             let videoToShowDiv,videoToShow,aux;
-            console.log(e.target.innerHTML);
             if (e.target.innerHTML ==='CERRAR(X)') {
                 videoToShow = e.target.parentNode;
                 aux = videoToShow.firstChild.src.slice(0,-11);
