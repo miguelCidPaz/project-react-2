@@ -188,7 +188,9 @@
 }
 
 @media (max-width:850px){
+
     .nav-head-link{
+        margin: auto;
         font-size: 15px;
     }
 
@@ -205,23 +207,24 @@
     .container-logo img{
         width: 200px;
     }
-    
-    .button-left, .button-right{
-        display: none;
-    }
-
-    .container-social-buttons{
-        display: none;
-    }
-
-    .social-icon{
-        display: none;
-    }
 
     .container-nav-head{
     gap: 10% 2%;
         flex-wrap: wrap;
         margin-top: -60px;
         width: 100%;
+    }
+}
+
+@media (max-width:900px) {
+    .social-icon{
+        display: none;
+    }
+    .button-left, .button-right{
+        display: none;
+    }
+
+    .container-social-buttons{
+        display: none;
     }
 }
