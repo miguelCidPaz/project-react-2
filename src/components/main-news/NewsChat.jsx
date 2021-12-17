@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import './styles.css';
 
+/**
+ * Dropdown chat that will receive the array saved from the parent
+ */
 class NewsChat extends Component {
     constructor(props) {
         super(props);
@@ -19,6 +22,11 @@ class NewsChat extends Component {
         }
     }
 
+    /**
+     * It receives a String, converts it to number and uses it to filter the list and then assign it to the state
+     * 
+     * @param {String} id 
+     */
     deleteComment(id) {
         const newID = parseInt(id)
         let arrComments = this.state.comments.filter(element => element.id !== newID)
@@ -31,6 +39,9 @@ class NewsChat extends Component {
         }))
     }
 
+    /**
+     * Method that will add comments to the status and therefore to the window
+     */
     addComment() {
         const comentarios = Object.values(this.state.comments)
         const mensaje = { id: comentarios.length, content: this.state.message }
