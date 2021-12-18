@@ -1,6 +1,9 @@
 import React from 'react';
 import './styles.css';
-/**Class for render middle sections xataka selection and xataka basics */
+/**Class for render middle sections xataka selection and xataka basics, it receives as props news from api and section tittles
+ * it also receives as props the functions to change news showed in section
+ * we request to the api by words calling the parent function with the string to search as param
+*/
 class Bar extends React.Component {
     constructor(props) {
         super(props);
