@@ -1,5 +1,7 @@
 import React from "react";
-
+/**creates each element of aside section 
+ * recieves props from Aside
+ */
 class AsideItem extends React.Component {
     render() {
         return <div className="asideItem">

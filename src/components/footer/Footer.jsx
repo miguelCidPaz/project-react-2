@@ -1,6 +1,9 @@
 import React from 'react';
 import './styles.css';
-
+/**This class returns the footer
+ * it receives data as props from App,
+ * it has a call to an anchor to come back to the header
+*/
 class Footer extends React.Component {
     render() {
 
